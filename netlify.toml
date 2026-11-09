@@ -1,0 +1,9 @@
+# STUDS.SG: static pages. No build step; Netlify publishes the public folder exactly as it is.
+[build]
+  publish = "public"
+
+# Serve the HTML byte for byte: the security headers list hashes of the inline scripts.
+[build.processing]
+  skip_processing = true
+[build.processing.html]
+  pretty_urls = false

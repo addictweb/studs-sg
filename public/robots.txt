@@ -1,0 +1,20 @@
+# STUDS.SG: search engines and AI assistants are welcome to crawl and index this site.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://studs-sg.netlify.app/sitemap.xml

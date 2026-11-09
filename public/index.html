@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<!--
+  STUDS.SG fundraising page
+  - Copy: plain text inside each <section>.
+  - Photos: files in /images. Replace a file with one of the same name, or change its src/srcset.
+    Each photo is cropped to its frame; object-position on the img sets the point kept in view (people centred).
+  - Fundraiser link: search for "gofundme" and replace every match. The share message is in the
+    studs-config block near the bottom.
+  - Security headers (_headers) list hashes of the two inline scripts. Copy edits do not change them;
+    if you edit a script, run tools/update_csp.py to refresh the hashes.
+  - Motion: every movement is tied to scroll position (see "Motion" in the script). Visitors who ask
+    for reduced motion, or who have JavaScript off, get the same page laid out statically.
+  - Smooth scrolling on desktop uses Lenis (MIT licence), included in the first script block.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STUDS Season 2 | Singapore men racing for charity</title>
+<meta name="description" content="Singapore men racing IRONMAN 70.3 Western Australia on 6 December 2026 for Lao Friends Hospital for Children. Donate on GoFundMe or share the fundraiser.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0C1A33">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://studs-sg.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://studs-sg.netlify.app/">
+<meta property="og:site_name" content="STUDS.SG">
+<meta property="og:title" content="Ordinary men. Extraordinary challenges.">
+<meta property="og:description" content="A group of Singapore men racing for charity. Season 2 supports free children’s healthcare in Laos. Every penny helps.">
+<meta property="og:image" content="https://studs-sg.netlify.app/images/studs-share.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="STUDS.SG: Ordinary men. Extraordinary challenges.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ordinary men. Extraordinary challenges.">
+<meta name="twitter:description" content="A group of Singapore men racing for charity. Season 2 supports free children’s healthcare in Laos. Every penny helps.">
+<meta name="twitter:image" content="https://studs-sg.netlify.app/images/studs-share.jpg">
+<meta name="twitter:image:alt" content="STUDS.SG: Ordinary men. Extraordinary challenges.">
+<meta name="apple-mobile-web-app-title" content="STUDS.SG">
+<meta name="application-name" content="STUDS.SG">
+<link rel="icon" href="favicon.ico?v=2" sizes="32x32">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon-96.png?v=2" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SportsOrganization",
+   "@id": "https://studs-sg.netlify.app/#studs",
+   "name": "STUDS",
+   "alternateName": [
+    "Support Through United Dad Strength",
+    "STUDS.SG"
+   ],
+   "url": "https://studs-sg.netlify.app/",
+   "description": "A group of Singapore men who take on endurance races to raise money for charity. Season 1 raised US$114,454 for Caring for Cambodia. Season 2 supports Lao Friends Hospital for Children.",
+   "sport": "Triathlon",
+   "foundingDate": "2025",
+   "location": {
+    "@type": "Place",
+    "name": "Singapore"
+   },
+   "logo": "https://studs-sg.netlify.app/images/studs-logo.png",
+   "sponsor": [
+    {
+     "@type": "Organization",
+     "name": "Boomarang Bistro & Bar",
+     "url": "https://www.boomarang.com.sg/"
+    },
+    {
+     "@type": "Organization",
+     "name": "Tsunami Sport",
+     "url": "https://www.tsunami-sport.com/"
+    }
+   ],
+   "image": "https://studs-sg.netlify.app/images/studs-share.jpg"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://studs-sg.netlify.app/#website",
+   "url": "https://studs-sg.netlify.app/",
+   "name": "STUDS.SG",
+   "inLanguage": "en-GB",
+   "publisher": {
+    "@id": "https://studs-sg.netlify.app/#studs"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://studs-sg.netlify.app/#webpage",
+   "url": "https://studs-sg.netlify.app/",
+   "name": "STUDS Season 2 | Singapore men racing for charity",
+   "description": "Singapore men racing IRONMAN 70.3 Western Australia on 6 December 2026 for Lao Friends Hospital for Children. Donate on GoFundMe or share the fundraiser.",
+   "inLanguage": "en-GB",
+   "isPartOf": {
+    "@id": "https://studs-sg.netlify.app/#website"
+   },
+   "about": {
+    "@id": "https://studs-sg.netlify.app/#studs"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://studs-sg.netlify.app/images/studs-share.jpg",
+    "width": 1200,
+    "height": 630
+   },
+   "mentions": [
+    {
+     "@type": "Organization",
+     "name": "Friends Without A Border",
+     "url": "https://fwab.org/"
+    },
+    {
+     "@type": "Hospital",
+     "name": "Lao Friends Hospital for Children",
+     "url": "https://fwab.org/about-the-hospital",
+     "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Luang Prabang",
+      "addressCountry": "LA"
+     }
+    },
+    {
+     "@type": "SportsEvent",
+     "name": "IRONMAN 70.3 Western Australia",
+     "startDate": "2026-12-06",
+     "location": {
+      "@type": "Place",
+      "name": "Busselton",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Busselton",
+       "addressRegion": "WA",
+       "addressCountry": "AU"
+      }
+     }
+    }
+   ],
+   "potentialAction": {
+    "@type": "DonateAction",
+    "name": "Donate on GoFundMe",
+    "target": "https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more",
+    "recipient": {
+     "@type": "Organization",
+     "name": "Friends Without A Border",
+     "url": "https://fwab.org/"
+    }
+   }
+  }
+ ]
+}
+</script>
+<style>
+/* Navy race-day story, paper for the hospital and the social side, green finish.
+   One typeface (Archivo). Phones: one column. Desktop: 12 columns, copy off-centre. */
+:root {
+  --navy: #0C1A33;
+  --paper: #F3F5F6;
+  --green: #7DC242;
+  --mist: #A9B4C6;
+  --slate: #4A5568;
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --edge-l: max(20px, env(safe-area-inset-left));
+  --edge-r: max(20px, env(safe-area-inset-right));
+  --gap: 20px;
+  --max: 1360px;
+  --header-h: 54px;
+  --hero-travel: 60vh;
+  /* 1% of the viewport, frozen at 1440px where the layout stops getting wider, so big type stops growing with it */
+  --vu: min(1vw, 14.4px);
+  color-scheme: light;
+}
+@media (min-width: 960px) {
+  :root { --gap: 32px; --edge-l: clamp(32px, 5vw, 72px); --edge-r: clamp(32px, 5vw, 72px); --header-h: 88px; --hero-travel: 70vh; }
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("fonts/archivo-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 959px) { .js { scroll-padding-bottom: 88px; } }
+body {
+  margin: 0; background: var(--navy); color: var(--paper);
+  font: 400 1.0625rem/1.55 var(--font);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, figure, dl, dd, ol, ul { margin: 0; }
+ol, ul { padding: 0; list-style: none; }
+a { color: inherit; }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+.on-dark { --focus: var(--paper); background-color: var(--navy); color: var(--paper); }
+.on-light { --focus: var(--navy); background-color: var(--paper); color: var(--navy); }
+.on-green { --focus: var(--navy); background-color: var(--green); color: var(--navy); }
+:focus-visible { outline: 3px solid var(--focus, var(--paper)); outline-offset: 3px; }
+[tabindex="-1"]:focus { outline: none; }
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-left: var(--edge-l); padding-right: var(--edge-r); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; z-index: 100; left: 12px; top: -80px; padding: 10px 16px; border-radius: 4px; background: var(--paper); color: var(--navy); font-weight: 700; text-decoration: none; }
+.skip:focus { top: calc(12px + env(safe-area-inset-top)); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 22px; border: 2px solid transparent; border-radius: 4px;
+  font: 700 1.0625rem/1.1 var(--font); text-decoration: none; text-align: center; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; transition: background-color .15s ease, border-color .15s ease;
+}
+.btn-donate { background: var(--green); color: var(--navy); }
+.btn-donate:hover { background: #93D25E; }
+.btn-ghost { background: transparent; color: var(--paper); border-color: rgba(243, 245, 246, .6); }
+.btn-ghost:hover { border-color: var(--paper); }
+.on-light .btn-ghost { color: var(--navy); border-color: rgba(12, 26, 51, .7); }
+.on-light .btn-ghost:hover { border-color: var(--navy); }
+.on-green .btn-donate { background: var(--navy); color: var(--paper); }
+.on-green .btn-donate:hover { background: #1B2D52; }
+.on-green .btn-ghost { color: var(--navy); border-color: rgba(12, 26, 51, .7); }
+.on-green .btn-ghost:hover { border-color: var(--navy); }
+
+/* Header sits over the top of the hero */
+.site-header { position: absolute; z-index: 20; top: 0; left: 0; right: 0; padding-top: env(safe-area-inset-top); color: var(--paper); --focus: var(--paper); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: var(--header-h); }
+.wordmark { display: inline-block; padding-block: 12px; font-weight: 900; font-size: 1.25rem; letter-spacing: -.01em; line-height: 1; text-decoration: none; }
+.nav { display: flex; align-items: center; gap: 30px; }
+.nav a:not(.nav-about) { display: none; }
+.nav-about { display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; font-weight: 700; text-decoration: none; }
+.wordmark .dot { color: var(--green); }
+@media (min-width: 960px) {
+  .wordmark { font-size: 1.5rem; }
+  .nav a:not(.nav-about) { display: inline; }
+  .nav a.btn { display: inline-flex; }
+  .nav .nav-about { font-weight: 400; min-height: 0; padding: 0; }
+  .nav a:not(.btn) { color: var(--mist); text-decoration: none; font-size: .9375rem; }
+  .nav a:not(.btn):hover { color: var(--paper); text-decoration: underline; text-underline-offset: 5px; }
+  .nav .btn { min-height: 44px; padding: 0 18px; font-size: .9375rem; }
+}
+
+/* Hero: the photo takes what is left once the headline and both buttons fit the first screen */
+.hero { position: relative; }
+.hero-inner { display: flex; flex-direction: column; padding-top: calc(var(--header-h) + env(safe-area-inset-top)); }
+.hero-slot { position: relative; height: clamp(96px, calc(80vh - 330px), 360px); height: clamp(96px, calc(80svh - 330px), 360px); }
+.hero-photo { position: absolute; inset: 0; overflow: hidden; background: #13244A; }
+.hero-photo img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 64%; }
+.hero-wash { display: none; }
+.hero-copy { padding: 18px var(--edge-r) 32px var(--edge-l); }
+.hero-title { display: flex; flex-direction: column; gap: 8px; }
+.ht-big {
+  font-weight: 900; text-transform: uppercase; line-height: .9; letter-spacing: -.01em;
+  font-size: clamp(2.5rem, min(14.6vw, 10vh), 6rem);
+  font-size: clamp(2.5rem, min(14.6vw, 10svh), 6rem);
+}
+.ht-sub { font-weight: 700; font-size: clamp(1.25rem, 1rem + 1.3vw, 2rem); line-height: 1.15; }
+.ht-big, .ht-sub { display: block; }
+.hero-lede { margin-top: 14px; color: var(--mist); max-width: 32em; }
+.hero-actions { display: grid; gap: 10px; margin-top: 20px; }
+@media (min-width: 960px) {
+  .hero-pin { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; min-height: 100svh; }
+  .hero-inner {
+    display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); width: 100%;
+    align-items: end; max-width: var(--max); margin-inline: auto; padding: calc(var(--header-h) + 16px) 0 48px var(--edge-l);
+  }
+  .hero-copy { grid-column: 1 / span 5; grid-row: 1; padding: 0 0 4px; }
+  .hero-slot { grid-column: 6 / -1; grid-row: 1; height: auto; aspect-ratio: 16 / 9; }
+  .ht-big { font-size: clamp(3.5rem, calc(var(--vu) * 5.6), 6rem); }
+  .hero-lede { font-size: 1.1875rem; margin-top: 20px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+}
+
+/* Parallax frames: each photo is a little taller than its frame, so it can drift without showing an edge */
+.plx { position: relative; overflow: hidden; background: #13244A; }
+.plx img { position: absolute; left: 0; top: 0; width: 100%; max-width: none; height: 100%; object-fit: cover; }
+.motion .plx img { top: -7%; height: 114%; }
+.motion .wall-item img, .motion .social-item img, .motion .race-feature img, .motion .cause-photo img { top: 0; height: 100%; }
+
+/* The cause: quiet, short */
+.cause { padding-block: 64px 72px; overflow-x: hidden; overflow-x: clip; }
+.cause-grid { display: grid; gap: 32px; }
+.cause-title { font-weight: 800; font-size: clamp(1.9rem, 1.2rem + 3vw, 3.4rem); line-height: 1.05; letter-spacing: -.01em; }
+.cause-lede { margin-top: 16px; font-size: 1.125rem; max-width: 30em; }
+.facts { margin-top: 28px; }
+.fact { display: grid; grid-template-columns: 5.6rem 1fr; gap: 14px; align-items: baseline; padding: 14px 0; border-top: 1px solid rgba(12, 26, 51, .16); }
+.fact:last-child { border-bottom: 1px solid rgba(12, 26, 51, .16); }
+.fact dt { font-weight: 800; font-size: 1.75rem; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.fact dd { color: var(--slate); }
+.more { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; }
+.cause-photo { aspect-ratio: 4 / 3; }
+.partner-logo { width: 96px; }
+@media (min-width: 960px) {
+  .cause { padding-block: 104px 112px; }
+  .cause-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: center; }
+  .cause-copy { grid-column: 1 / span 5; }
+  .cause-photo { grid-column: 7 / -1; }
+  .fact { grid-template-columns: 6.6rem 1fr; }
+  .fact dt { font-size: 2rem; }
+}
+
+/* The challenge: the acronym, then the training photos */
+.challenge { padding-block: 80px 64px; }
+.intro { display: grid; gap: 24px; }
+.acro { font-weight: 900; text-transform: uppercase; font-size: clamp(2.5rem, 14vw, 5rem); line-height: .92; letter-spacing: -.01em; }
+.acro-line { display: block; white-space: nowrap; }
+.acro b { color: var(--green); font-weight: 900; }
+.acro-rest, .acro-word { display: inline-block; }
+.acro-note { font-size: 1.125rem; max-width: 30em; }
+@media (min-width: 960px) {
+  .challenge { padding-block: 120px 96px; }
+  .intro { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); align-items: end; }
+  .acro { grid-column: 1 / span 7; font-size: clamp(4rem, calc(var(--vu) * 7.6), 8.5rem); }
+  .acro-note { grid-column: 8 / -1; font-size: 1.25rem; padding-bottom: 6px; }
+}
+
+/* Photo walls: staggered columns, each photo in a frame of its own shape so nobody is cropped.
+   With motion the columns drift at different speeds. Without JavaScript: an even grid of tiles. */
+.wall { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 36px; }
+.wall-col { display: contents; }
+.wall-item { aspect-ratio: 4 / 3; }
+@media (min-width: 960px) {
+  .wall { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: 64px; }
+}
+.js .wall-col { position: relative; display: grid; gap: 10px; align-content: start; }
+.js .wall-col:nth-child(2) { margin-top: 48px; }
+.js .wall-col:nth-child(3) { display: none; }
+.js .wall-item.portrait { aspect-ratio: 3 / 4; }
+.js .wall-item.upright { aspect-ratio: 2 / 3; }
+.js .wall-item.tall { aspect-ratio: 800 / 1386; }
+.js .wall-item.landscape { aspect-ratio: 4 / 3; }
+.js .wall-item.wide { aspect-ratio: 3 / 2; }
+@media (min-width: 960px) {
+  .js .wall { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .js .wall-col { gap: var(--gap); }
+  .js .wall-col:nth-child(1) { grid-column: 1 / span 4; }
+  .js .wall-col:nth-child(2) { grid-column: 5 / span 4; margin-top: 150px; }
+  .js .wall-col:nth-child(3) { display: grid; grid-column: 9 / span 4; margin-top: 60px; }
+}
+/* Race days: a second wall under its own headline, like the drinks */
+.races { margin-top: 112px; }
+.race-feature { aspect-ratio: 1400 / 788; margin-top: 28px; }
+@media (min-width: 960px) { .races { margin-top: 176px; } .race-feature { margin-top: 48px; } }
+
+/* The social side: a mosaic with no gaps, each frame the shape of its photo so nobody is cut off */
+.social { padding-block: 64px 0; }
+.social-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
+  grid-template-areas: "head head" "cocktail hawker" "cocktail pub" "dinner dinner" "splash splash";
+}
+.social-row { display: contents; }
+.si-dinner, .si-splash, .si-hawker { aspect-ratio: 4 / 3; }
+.si-pub { aspect-ratio: 16 / 9; }
+.social-head { grid-area: head; margin-bottom: 20px; }
+.social-title, .race-title { font-weight: 900; text-transform: uppercase; font-size: clamp(2.6rem, 14.2vw, 9.5rem); line-height: .86; letter-spacing: -.01em; }
+.social-title .sl, .race-title .sl { display: block; }
+.social-lede { margin-top: 16px; font-size: 1.1875rem; font-weight: 700; line-height: 1.3; max-width: 20em; }
+.social-item { position: relative; overflow: hidden; background: #C9D3E1; }
+
+/* Navy tint over the photos further down. The script sets --tint from 1 (navy) to 0 (full colour) as each
+   photo scrolls into view; without JavaScript it stays at 0, so every photo is in colour. */
+.cause-photo, .wall-item, .social-item, .race-feature { isolation: isolate; }
+.cause-photo::before, .wall-item::before, .social-item::before, .race-feature::before,
+.cause-photo::after, .wall-item::after, .social-item::after, .race-feature::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: var(--tint, 0);
+}
+.cause-photo::before, .wall-item::before, .social-item::before, .race-feature::before { background: #5C7398; mix-blend-mode: color; }
+.cause-photo::after, .wall-item::after, .social-item::after, .race-feature::after { background: #0C1A33; mix-blend-mode: lighten; }
+.social-item img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.si-dinner { grid-area: dinner; }
+.si-cocktail { grid-area: cocktail; }
+.si-splash { grid-area: splash; }
+.si-hawker { grid-area: hawker; }
+.si-pub { grid-area: pub; }
+@media (min-width: 960px) {
+  .social { padding-block: 96px 0; }
+  .social-grid { display: block; }
+  .social-row { display: flex; gap: var(--gap); margin-top: var(--gap); }
+  .social-head + .social-row { margin-top: 0; }
+  .social-row .social-item { flex: var(--a) 1 0%; aspect-ratio: var(--a); }
+  .social-head { margin-bottom: 28px; }
+}
+
+/* Season 1 */
+.season1 { padding-block: 56px 72px; overflow-x: hidden; overflow-x: clip; }
+.tallies { display: grid; gap: 44px; }
+.s1-label { display: flex; align-items: center; gap: 10px; font-size: 1.0625rem; font-weight: 700; }
+.live { padding: 3px 9px 4px; border-radius: 4px; background: var(--navy); color: var(--paper); font-size: .8125rem; font-weight: 700; line-height: 1.2; }
+.s1-figure { margin-top: 6px; font-weight: 900; font-size: clamp(2.5rem, 13.5vw, 8rem); line-height: .9; letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.s1-text { margin-top: 10px; font-size: 1.1875rem; max-width: 26em; }
+@media (min-width: 960px) {
+  .tallies { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap); }
+  .s1-figure { font-size: clamp(3rem, calc(var(--vu) * 6), 6.5rem); }
+}
+@media (min-width: 960px) { .season1 { padding-block: 96px 112px; } }
+
+/* Donate and share */
+.donate { padding-block: 72px 80px; overflow-x: hidden; overflow-x: clip; }
+.donate-grid { display: grid; }
+.donate-title { font-weight: 900; text-transform: uppercase; font-size: clamp(3rem, .6rem + 11.4vw, 9.4rem); line-height: .86; letter-spacing: -.01em; }
+.donate-title .w { display: inline-block; }
+.donate-actions { margin-top: 24px; display: grid; }
+.donate-note { margin-top: 12px; font-size: 1rem; }
+.share { margin-top: 48px; padding-top: 24px; border-top: 2px solid rgba(12, 26, 51, .25); }
+.share-ask { font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); font-weight: 700; line-height: 1.3; max-width: 22em; }
+.share-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 18px; }
+.share-url { margin-top: 12px; }
+.no-js .share-buttons { display: none; }
+.no-js .share-url { margin-top: 18px; }
+.share-url input {
+  width: 100%; min-height: 46px; padding: 10px 12px; font: 500 .9375rem/1.3 var(--font); color: var(--navy);
+  background: rgba(255, 255, 255, .45); border: 2px solid rgba(12, 26, 51, .35); border-radius: 4px;
+}
+.status { min-height: 1.6em; margin-top: 10px; font-weight: 700; }
+@media (min-width: 960px) {
+  .donate { padding-block: 104px 112px; }
+  .donate-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+  .donate-title { grid-column: 1 / -1; }
+  .donate-main { grid-column: 1 / span 5; }
+  .donate-actions { display: flex; }
+  .share { grid-column: 7 / -1; margin-top: 24px; padding-top: 0; border-top: 0; }
+  .share-buttons { display: flex; flex-wrap: wrap; }
+}
+
+/* Footer */
+.site-footer { position: relative; padding-block: 56px calc(44px + env(safe-area-inset-bottom)); color: var(--mist); font-size: .9375rem; }
+.footer-grid { display: grid; gap: 24px; }
+.site-footer .wordmark { color: var(--paper); }
+.footer-brand p { margin-top: 8px; }
+.footer-head { font-size: .9375rem; font-weight: 400; color: var(--mist); }
+/* Sponsor logos are white versions sized by eye to carry equal weight; one font-size scales them all. */
+.sponsors { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 44px; margin-top: 18px; font-size: clamp(.8125rem, .7rem + .6vw, 1rem); }
+.sponsors a { display: block; }
+.sponsors img { display: block; max-width: 100%; height: auto; }
+.logo-boomarang { width: 8.5em; }
+.logo-tsunami { width: 8.6em; }
+.footer-meta .credit { margin-top: 28px; }
+.site-footer a { color: var(--paper); text-underline-offset: 3px; }
+@media (min-width: 960px) {
+  .footer-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+  .footer-brand { grid-column: 1 / span 4; }
+  .footer-meta { grid-column: 6 / -1; }
+}
+
+/* Sticky donate on phones, once the hero buttons have gone */
+.sticky-donate { display: none; }
+@media (max-width: 959px) {
+  .js .sticky-donate {
+    display: inline-flex; position: fixed; z-index: 50;
+    right: max(16px, env(safe-area-inset-right)); bottom: calc(14px + env(safe-area-inset-bottom));
+    min-height: 48px; padding: 0 22px; box-shadow: 0 0 0 2px var(--navy);
+    transform: translateY(calc(100% + 40px)); visibility: hidden;
+    transition: transform .25s ease, visibility 0s linear .25s;
+  }
+  .js .sticky-donate.is-visible { transform: none; visibility: visible; transition: transform .25s ease, visibility 0s; }
+}
+
+/* ---------- Motion layout. Only applies once the script has switched it on (not for reduced motion). */
+.motion .tone.blend { background-color: transparent; }
+
+/* Hero: pinned while the photo opens out to the full screen, then fades to navy as the STUDS section rises */
+.motion .hero { height: calc(100vh + var(--hero-travel)); height: calc(100lvh + var(--hero-travel)); }
+.motion .hero-pin { position: sticky; top: 0; height: 100vh; height: 100lvh; overflow: hidden; }
+.motion .hero-slot { position: static; }
+.motion .hero-photo img { object-fit: fill; transform-origin: 0 0; }
+.motion .hero-copy { position: relative; z-index: 2; }
+.motion .hero-wash { display: block; position: absolute; z-index: 3; inset: 0; background: var(--navy); opacity: 0; pointer-events: none; }
+.motion .challenge { position: relative; z-index: 2; margin-top: calc(var(--hero-travel) * -.42); }
+@media (min-width: 960px) {
+}
+
+/* Social: the mosaic stays put; each photo opens as it arrives and its picture drifts inside the frame,
+   while the two headline words slide past each other */
+.motion .social, .motion .challenge { overflow-x: hidden; overflow-x: clip; }
+
+.motion .ht-big, .motion .ht-sub, .motion .acro-word, .motion .wall-col, .motion .wall-item img,
+.motion .social-title .sl, .motion .race-title .sl, .motion .social-item img, .motion .donate-title .w { will-change: transform; }
+
+/* Smooth scrolling (desktop) */
+html.lenis, html.lenis body { height: auto; }
+html.lenis { scroll-behavior: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .js .sticky-donate, .js .sticky-donate.is-visible { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="STUDS.SG, back to top">STUDS<span class="dot">.</span>SG</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#challenge">The challenge</a>
+      <a href="#cause">The cause</a>
+      <a href="#share">Share</a>
+      <a class="nav-about" href="about.html">About</a>
+      <a class="btn btn-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more" data-donate>Donate</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="hero tone on-dark" aria-labelledby="hero-title">
+    <div class="hero-pin">
+      <div class="hero-inner">
+        <div class="hero-slot">
+          <figure class="hero-photo">
+            <picture>
+              <source type="image/webp" srcset="images/squad-800.webp 800w, images/squad-1400.webp 1400w" sizes="100vw">
+              <img src="images/squad-1400.jpg"
+                 srcset="images/squad-800.jpg 800w, images/squad-1400.jpg 1400w"
+                 sizes="100vw" width="1400" height="788" fetchpriority="high"
+                 alt="The STUDS Season 1 squad, more than 20 men in matching kit, lined up outside a temple in Thailand">
+            </picture>
+          </figure>
+        </div>
+        <div class="hero-copy">
+          <h1 class="hero-title" id="hero-title">
+            <span class="ht-big">Ordinary men.</span>
+            <span class="ht-sub">Extraordinary challenges.</span>
+          </h1>
+          <p class="hero-lede">A group of Singapore men racing for charity. Season 2 supports free children’s healthcare in&nbsp;Laos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more" data-donate>Donate on GoFundMe</a>
+            <a class="btn btn-ghost" href="#share" data-share>Share the fundraiser</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wash" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="challenge tone on-dark" id="challenge" aria-labelledby="challenge-title">
+    <div class="wrap intro">
+      <h2 class="acro" id="challenge-title">
+        <span class="sr-only">STUDS: Support Through United Dad Strength</span>
+        <span class="acro-line" aria-hidden="true"><b>S</b><span class="acro-rest"><span class="acro-word">upport</span></span></span>
+        <span class="acro-line" aria-hidden="true"><b>T</b><span class="acro-rest"><span class="acro-word">hrough</span></span></span>
+        <span class="acro-line" aria-hidden="true"><b>U</b><span class="acro-rest"><span class="acro-word">nited</span></span></span>
+        <span class="acro-line" aria-hidden="true"><b>D</b><span class="acro-rest"><span class="acro-word">ad</span></span></span>
+        <span class="acro-line" aria-hidden="true"><b>S</b><span class="acro-rest"><span class="acro-word">trength</span></span></span>
+      </h2>
+      <p class="acro-note">Season 2 ends at IRONMAN 70.3 Western Australia in Busselton on 6 December 2026, after a year of early starts and too much Lycra.</p>
+    </div>
+
+    <div class="wrap">
+      <div class="wall">
+        <div class="wall-col">
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 62%" src="images/training-dawn.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members riding away down an empty road at sunrise, with mist over the trees"></figure>
+          <figure class="wall-item plx portrait"><img style="object-position: 50% 50%" src="images/training-bikelift.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member lifting his road bike at the side of the road"></figure>
+          <figure class="wall-item plx wide"><img style="object-position: 50% 60%" src="images/training-night.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Cyclists with bike lights gathering in the dark before an early ride"></figure>
+        </div>
+        <div class="wall-col">
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 58%" src="images/training-bikes.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Six STUDS members in the Season 2 kit standing with their road bikes on a quiet road before a ride"></figure>
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 30%" src="images/training-season2.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members in the Season 2 kit at sunrise"></figure>
+          <figure class="wall-item plx portrait"><img style="object-position: 50% 50%" src="images/training-selfie.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A selfie on a group ride, with riders in helmets lined up behind"></figure>
+        </div>
+        <div class="wall-col">
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 62%" src="images/training-ride.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="A group of STUDS members with their bikes before a ride"></figure>
+          <figure class="wall-item plx wide"><img style="object-position: 50% 45%" src="images/training-sea.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member in the Season 2 kit stopping by the sea on a ride"></figure>
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 40%" src="images/training-pair.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Two STUDS members in cycling kit taking a selfie at dawn"></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap races">
+      <div class="race-head">
+        <h3 class="race-title"><span class="sl">Race</span> <span class="sl">days.</span></h3>
+      </div>
+      <figure class="race-feature plx"><img src="images/race-family-1400.jpg" srcset="images/race-family-800.jpg 800w, images/race-family-1400.jpg 1400w" sizes="(min-width: 1440px) 1216px, 92vw" width="1400" height="788" loading="lazy" decoding="async" alt="The STUDS squad with their families at the Laguna Phuket Triathlon finish line"></figure>
+      <div class="wall">
+        <div class="wall-col">
+          <figure class="wall-item plx upright"><img style="object-position: 50% 40%" src="images/race-finish.jpg" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running down the red carpet to the finish line at Laguna Phuket Triathlon"></figure>
+          <figure class="wall-item plx wide"><img style="object-position: 50% 62%" src="images/training-beach.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Eight STUDS members in race suits lined up on a beach"></figure>
+          <figure class="wall-item plx wide"><img style="object-position: 50% 50%" src="images/race-together.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members raising their arms as they cross the finish line together"></figure>
+        </div>
+        <div class="wall-col">
+          <figure class="wall-item plx tall"><img style="object-position: 50% 28%" src="images/training-laguna.jpg" width="800" height="1386" loading="lazy" decoding="async" alt="A STUDS member roaring with both fists clenched as he runs at Laguna Phuket Triathlon"></figure>
+          <figure class="wall-item plx portrait"><img style="object-position: 50% 40%" src="images/race-caps.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="Two STUDS members in pink swim caps on the beach before the swim start"></figure>
+          <figure class="wall-item plx wide"><img style="object-position: 50% 50%" src="images/race-fistbump.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members bumping fists on race day"></figure>
+        </div>
+        <div class="wall-col">
+          <figure class="wall-item plx portrait"><img style="object-position: 55% 50%" src="images/training-flyer.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member cycling past the Singapore Flyer"></figure>
+          <figure class="wall-item plx landscape"><img style="object-position: 50% 55%" src="images/training-banner.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="The STUDS squad on a beach with their cartoon team banner"></figure>
+          <figure class="wall-item plx upright"><img style="object-position: 50% 40%" src="images/race-arch.jpg" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running towards the Laguna Phuket Triathlon finish arch"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cause tone on-light" id="cause" aria-labelledby="cause-title">
+    <div class="wrap cause-grid">
+      <div class="cause-copy">
+        <h2 class="cause-title" id="cause-title">Lao Friends Hospital for Children</h2>
+        <p class="cause-lede">Free care for children in northern Laos since 2015, with Lao doctors and nurses trained on site. Friends Without A Border runs the hospital and organises this fundraiser.</p>
+        <dl class="facts">
+          <div class="fact"><dt>38,000</dt><dd>children seen each year</dd></div>
+          <div class="fact"><dt>24</dt><dd>neonatal beds, the only unit of its kind in the region</dd></div>
+          <div class="fact"><dt>1 in 34</dt><dd>children in Laos die before turning five (UNICEF)</dd></div>
+        </dl>
+        <div class="more">
+          <a class="btn btn-ghost" href="https://fwab.org/about-the-hospital">Find out more<span class="sr-only"> about Lao Friends Hospital for Children</span></a>
+          <img class="partner-logo" src="images/lfhc-logo.png" width="520" height="546" loading="lazy" decoding="async" alt="Lao Friends Hospital for Children">
+        </div>
+      </div>
+      <figure class="cause-photo plx">
+        <img src="images/lfhc-neonatal-800.jpg"
+             srcset="images/lfhc-neonatal-800.jpg 800w, images/lfhc-neonatal-1400.jpg 1400w"
+             sizes="(min-width: 960px) 45vw, 100vw" width="1400" height="1050" loading="lazy" decoding="async"
+             alt="Three nurses at Lao Friends Hospital for Children caring for a newborn baby in a cot">
+      </figure>
+    </div>
+  </section>
+
+  <section class="social tone on-light" id="social" aria-labelledby="social-title">
+    <div class="wrap social-grid">
+      <div class="social-head">
+        <h2 class="social-title" id="social-title"><span class="sl">Recovery</span> <span class="sl">drinks.</span></h2>
+        <p class="social-lede">Outrun the drinkers, outdrink the runners. And look after each other’s physical and mental wellbeing.</p>
+      </div>
+      <div class="social-row">
+        <figure class="social-item si-dinner" style="--a: 1.3333"><img style="object-position: 50% 58%" src="images/social-dinner-1400.jpg" srcset="images/social-dinner-868.jpg 868w, images/social-dinner-1400.jpg 1400w" sizes="(min-width: 960px) 50vw, 90vw" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members in team shirts at a long dinner table under a pergola at night, raising their glasses"></figure>
+        <figure class="social-item si-cocktail" style="--a: 0.8003"><img style="object-position: 46% 38%" src="images/social-cocktail-1050.jpg" srcset="images/social-cocktail-651.jpg 651w, images/social-cocktail-1050.jpg 1050w" sizes="(min-width: 960px) 30vw, 64vw" width="1050" height="1312" loading="lazy" decoding="async" alt="A STUDS member drinking from a giant cocktail glass and holding up a STUDS cap"></figure>
+        <figure class="social-item si-hawker" style="--a: 1.3333"><img style="object-position: 54% 58%" src="images/social-hawker-1400.jpg" srcset="images/social-hawker-868.jpg 868w, images/social-hawker-1400.jpg 1400w" sizes="(min-width: 960px) 46vw, 84vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Three STUDS members in caps raising mugs of beer at a hawker centre"></figure>
+      </div>
+      <div class="social-row">
+        <figure class="social-item si-splash" style="--a: 1.3333"><img style="object-position: 50% 64%" src="images/social-splash-1400.jpg" srcset="images/social-splash-868.jpg 868w, images/social-splash-1400.jpg 1400w" sizes="(min-width: 960px) 44vw, 80vw" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members and friends with drinks outside Splash! Bar"></figure>
+        <figure class="social-item si-pub" style="--a: 1.7766"><img style="object-position: 42% 70%" src="images/social-pub-1400.jpg" srcset="images/social-pub-868.jpg 868w, images/social-pub-1400.jpg 1400w" sizes="(min-width: 960px) 56vw, 96vw" width="1400" height="788" loading="lazy" decoding="async" alt="STUDS members in team shirts round a pub table with drinks"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="season1 tone on-light" aria-labelledby="totals-title">
+    <div class="wrap tallies">
+      <h2 class="sr-only" id="totals-title">Money raised</h2>
+      <div class="tally">
+        <h3 class="s1-label">Season 1</h3>
+        <p class="s1-figure">US$114,454</p>
+        <p class="s1-text">raised for Caring for Cambodia</p>
+      </div>
+      <!-- SEASON 2 TOTAL: copy the figure from GoFundMe and update the date. -->
+      <div class="tally">
+        <h3 class="s1-label">Season 2 <span class="live">In progress</span></h3>
+        <p class="s1-figure">US$115,000</p>
+        <p class="s1-text">raised so far for Lao Friends Hospital for Children, as at 9 November 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="donate tone on-green" id="donate" aria-labelledby="donate-title">
+    <div class="wrap donate-grid">
+      <h2 class="donate-title" id="donate-title"><span class="w">Every</span> <span class="w">penny</span> <span class="w">helps.</span></h2>
+      <div class="donate-main">
+        <div class="donate-actions">
+          <a class="btn btn-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more" data-donate>Donate on GoFundMe</a>
+        </div>
+        <p class="donate-note">Donations go to Friends Without A Border. GoFundMe shows the latest total.</p>
+      </div>
+      <div class="share" id="share" tabindex="-1">
+        <p class="share-ask">Please share this fundraiser with your friends, family and colleagues.</p>
+        <div class="share-buttons">
+          <button class="btn btn-ghost" type="button" id="share-native" hidden>Share</button>
+          <button class="btn btn-ghost" type="button" id="share-copy" hidden>Copy link</button>
+        </div>
+        <div class="share-url">
+          <label class="sr-only" for="share-url">Fundraiser link</label>
+          <input id="share-url" type="text" readonly value="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more">
+        </div>
+        <p class="status" id="share-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="wordmark" href="#top" aria-label="STUDS.SG, back to top">STUDS<span class="dot">.</span>SG</a>
+      <p>Support Through United Dad Strength</p>
+      <p><a href="about.html">About STUDS</a></p>
+    </div>
+    <div class="footer-meta">
+      <h2 class="footer-head">Thanks to our sponsors</h2>
+      <ul class="sponsors">
+        <li><a href="https://www.boomarang.com.sg/"><img class="logo-boomarang" src="images/sponsors/boomarang.png" width="360" height="88" alt="Boomarang Bistro &amp; Bar" loading="lazy" decoding="async"></a></li>
+        <li><a href="https://www.tsunami-sport.com/"><img class="logo-tsunami" src="images/sponsors/tsunami.png" width="389" height="49" alt="Tsunami" loading="lazy" decoding="async"></a></li>
+      </ul>
+      <p class="credit">Hospital photo: <a href="https://fwab.org/about-the-hospital">Friends Without A Border</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="btn btn-donate sticky-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more" data-donate>Donate<span class="sr-only"> on GoFundMe</span></a>
+
+<!-- Edit the fundraiser link and share message here. -->
+<script type="application/json" id="studs-config">
+{
+  "url": "https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more",
+  "title": "STUDS Season 2",
+  "text": "A group of Singapore men is racing IRONMAN 70.3 Western Australia to raise money for Lao Friends Hospital for Children. Every penny helps."
+}
+</script>
+<script>
+/*! Lenis 1.3.27 | MIT License | Copyright (c) 2024 darkroom.engineering | https://github.com/darkroomengineering/lenis */
+(function(){var e=`1.3.27`;function t(e,t,n){return Math.max(e,Math.min(t,n))}function n(e,t,n){return(1-n)*e+n*t}function r(e,t,r,i){return n(e,t,1-Math.exp(-r*i))}function i(e,t){return(e%t+t)%t}var a=class{isRunning=!1;value=0;from=0;to=0;currentTime=0;lerp;duration;easing;onUpdate;advance(e){if(!this.isRunning)return;let n=!1;if(this.duration&&this.easing){this.currentTime+=e;let r=t(0,this.currentTime/this.duration,1);n=r>=1;let i=n?1:this.easing(r);this.value=this.from+(this.to-this.from)*i}else this.lerp?(this.value=r(this.value,this.to,this.lerp*60,e),Math.round(this.value)===Math.round(this.to)&&(this.value=this.to,n=!0)):(this.value=this.to,n=!0);n&&this.stop(),this.onUpdate?.(this.value,n)}stop(){this.isRunning=!1}fromTo(e,t,{lerp:n,duration:r,easing:i,onStart:a,onUpdate:o}){this.from=this.value=e,this.to=t,this.lerp=n,this.duration=r,this.easing=i,this.currentTime=0,this.isRunning=!0,a?.(),this.onUpdate=o}};function o(e,t){let n;return function(...r){clearTimeout(n),n=setTimeout(()=>{n=void 0,e.apply(this,r)},t)}}var s=class{width=0;height=0;scrollHeight=0;scrollWidth=0;debouncedResize;wrapperResizeObserver;contentResizeObserver;constructor(e,t,{autoResize:n=!0,debounce:r=250}={}){this.wrapper=e,this.content=t,n&&(this.debouncedResize=o(this.resize,r),this.wrapper instanceof Window?window.addEventListener(`resize`,this.debouncedResize):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}destroy(){this.wrapperResizeObserver?.disconnect(),this.contentResizeObserver?.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener(`resize`,this.debouncedResize)}resize=()=>{this.onWrapperResize(),this.onContentResize()};onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)};onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)};get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}},c=class{events={};emit(e,...t){let n=this.events[e]||[];for(let e=0,r=n.length;e<r;e++)n[e]?.(...t)}on(e,t){return this.events[e]?this.events[e].push(t):this.events[e]=[t],()=>{this.events[e]=this.events[e]?.filter(e=>t!==e)}}off(e,t){this.events[e]=this.events[e]?.filter(e=>t!==e)}destroy(){this.events={}}};let l={passive:!1};function u(e,t){return e===1?16.666666666666668:e===2?t:1}var d=class{touchStart={x:0,y:0};lastDelta={x:0,y:0};window={width:0,height:0};emitter=new c;constructor(e,t={wheelMultiplier:1,touchMultiplier:1}){this.element=e,this.options=t,window.addEventListener(`resize`,this.onWindowResize),this.onWindowResize(),this.element.addEventListener(`wheel`,this.onWheel,l),this.element.addEventListener(`touchstart`,this.onTouchStart,l),this.element.addEventListener(`touchmove`,this.onTouchMove,l),this.element.addEventListener(`touchend`,this.onTouchEnd,l)}on(e,t){return this.emitter.on(e,t)}destroy(){this.emitter.destroy(),window.removeEventListener(`resize`,this.onWindowResize),this.element.removeEventListener(`wheel`,this.onWheel,l),this.element.removeEventListener(`touchstart`,this.onTouchStart,l),this.element.removeEventListener(`touchmove`,this.onTouchMove,l),this.element.removeEventListener(`touchend`,this.onTouchEnd,l)}onTouchStart=e=>{let{clientX:t,clientY:n}=e.targetTouches?e.targetTouches[0]:e;this.touchStart.x=t,this.touchStart.y=n,this.lastDelta={x:0,y:0},this.emitter.emit(`scroll`,{deltaX:0,deltaY:0,event:e})};onTouchMove=e=>{let{clientX:t,clientY:n}=e.targetTouches?e.targetTouches[0]:e,r=-(t-this.touchStart.x)*this.options.touchMultiplier,i=-(n-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=t,this.touchStart.y=n,this.lastDelta={x:r,y:i},this.emitter.emit(`scroll`,{deltaX:r,deltaY:i,event:e})};onTouchEnd=e=>{this.emitter.emit(`scroll`,{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:e})};onWheel=e=>{let{deltaX:t,deltaY:n,deltaMode:r}=e,i=u(r,this.window.width),a=u(r,this.window.height);t*=i,n*=a,t*=this.options.wheelMultiplier,n*=this.options.wheelMultiplier,this.emitter.emit(`scroll`,{deltaX:t,deltaY:n,event:e})};onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}}};let f=e=>Math.min(1,1.001-2**(-10*e));var p=class{_isScrolling=!1;_isStopped=!1;_isLocked=!1;_preventNextNativeScrollEvent=!1;_resetVelocityTimeout=null;_rafId=null;_isDraggingSelection=!1;reducedMotionMediaQuery=window.matchMedia(`(prefers-reduced-motion: reduce)`);isTouching;isIos;time=0;userData={};lastVelocity=0;velocity=0;direction=0;options;targetScroll;animatedScroll;animate=new a;emitter=new c;dimensions;virtualScroll;constructor({wrapper:t=window,content:n=document.documentElement,eventsTarget:r=t,smoothWheel:i=!0,syncTouch:a=!1,syncTouchLerp:o=.075,touchInertiaExponent:c=1.7,duration:l,easing:u,lerp:p=.1,infinite:m=!1,orientation:h=`vertical`,gestureOrientation:g=h===`horizontal`?`both`:`vertical`,touchMultiplier:_=1,wheelMultiplier:v=1,autoResize:y=!0,prevent:b,virtualScroll:x,overscroll:S=!0,autoRaf:C=!1,anchors:w=!1,autoToggle:T=!1,allowNestedScroll:E=!1,__experimental__naiveDimensions:D=!1,naiveDimensions:O=D,stopInertiaOnNavigate:k=!1,respectReducedMotion:A=!0}={}){window.lenisVersion=e,window.lenis||(window.lenis={}),window.lenis.version=e,h===`horizontal`&&(window.lenis.horizontal=!0),a===!0&&(window.lenis.touch=!0),this.isIos=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),(!t||t===document.documentElement)&&(t=window),typeof l==`number`&&typeof u!=`function`?u=f:typeof u==`function`&&typeof l!=`number`&&(l=1),this.options={wrapper:t,content:n,eventsTarget:r,smoothWheel:i,syncTouch:a,syncTouchLerp:o,touchInertiaExponent:c,duration:l,easing:u,lerp:p,infinite:m,gestureOrientation:g,orientation:h,touchMultiplier:_,wheelMultiplier:v,autoResize:y,prevent:b,virtualScroll:x,overscroll:S,autoRaf:C,anchors:w,autoToggle:T,allowNestedScroll:E,naiveDimensions:O,stopInertiaOnNavigate:k,respectReducedMotion:A},this.dimensions=new s(t,n,{autoResize:y}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener(`scroll`,this.onNativeScroll),this.options.wrapper.addEventListener(`scrollend`,this.onScrollEnd,{capture:!0}),(this.options.anchors||this.options.stopInertiaOnNavigate)&&this.options.wrapper.addEventListener(`click`,this.onClick),this.options.wrapper.addEventListener(`pointerdown`,this.onPointerDown),this.virtualScroll=new d(r,{touchMultiplier:_,wheelMultiplier:v}),this.virtualScroll.on(`scroll`,this.onVirtualScroll),this.options.autoToggle&&(this.checkOverflow(),this.rootElement.addEventListener(`transitionend`,this.onTransitionEnd)),this.options.autoRaf&&(this._rafId=requestAnimationFrame(this.raf))}destroy(){this.emitter.destroy(),this._resetVelocityTimeout!==null&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this.options.wrapper.removeEventListener(`scroll`,this.onNativeScroll),this.options.wrapper.removeEventListener(`scrollend`,this.onScrollEnd,{capture:!0}),this.options.wrapper.removeEventListener(`pointerdown`,this.onPointerDown),(this.options.anchors||this.options.stopInertiaOnNavigate)&&this.options.wrapper.removeEventListener(`click`,this.onClick),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName(),this._rafId&&cancelAnimationFrame(this._rafId)}on(e,t){return this.emitter.on(e,t)}off(e,t){return this.emitter.off(e,t)}onScrollEnd=e=>{e instanceof CustomEvent||(this.isScrolling===`smooth`||this.isScrolling===!1)&&e.stopPropagation()};dispatchScrollendEvent=()=>{this.options.wrapper.dispatchEvent(new CustomEvent(`scrollend`,{bubbles:this.options.wrapper===window,detail:{lenisScrollEnd:!0}}))};get overflow(){let e=this.isHorizontal?`overflow-x`:`overflow-y`;return getComputedStyle(this.rootElement)[e]}checkOverflow(){[`hidden`,`clip`].includes(this.overflow)?this.internalStop():this.internalStart()}onTransitionEnd=e=>{e.propertyName?.includes(`overflow`)&&e.target===this.rootElement&&this.checkOverflow()};setScroll(e){this.isHorizontal?this.options.wrapper.scrollTo({left:e,behavior:`instant`}):this.options.wrapper.scrollTo({top:e,behavior:`instant`})}onClick=e=>{let t=e.composedPath().filter(e=>e instanceof HTMLAnchorElement&&e.href).map(e=>new URL(e.href)),n=new URL(window.location.href);if(this.options.anchors){let e=t.find(e=>n.host===e.host&&n.pathname===e.pathname&&e.hash);if(e){let t=typeof this.options.anchors==`object`&&this.options.anchors?this.options.anchors:void 0,n=decodeURIComponent(e.hash);this.scrollTo(n,t);return}}if(this.options.stopInertiaOnNavigate&&t.some(e=>n.host===e.host&&n.pathname!==e.pathname)){this.reset();return}};onPointerDown=e=>{e.button===1&&this.reset()};isTouchOnSelectionHandle(e){let t=window.getSelection();if(!t||t.isCollapsed||t.rangeCount===0)return!1;let n=e.targetTouches[0]??e.changedTouches[0];if(!n)return!1;let r=t.getRangeAt(0).getClientRects();if(r.length===0)return!1;let i=r[0],a=r[r.length-1],o=Math.hypot(n.clientX-i.left,n.clientY-i.top)<=40,s=Math.hypot(n.clientX-a.right,n.clientY-a.bottom)<=40;return o||s}onVirtualScroll=e=>{if(typeof this.options.virtualScroll==`function`&&this.options.virtualScroll(e)===!1)return;let{deltaX:t,deltaY:n,event:r}=e;if(this.emitter.emit(`virtual-scroll`,{deltaX:t,deltaY:n,event:r}),r.ctrlKey||r.lenisStopPropagation)return;let i=r.type.includes(`touch`),a=r.type.includes(`wheel`);if(i&&this.isIos&&(r.type===`touchstart`&&(this._isDraggingSelection=this.isTouchOnSelectionHandle(r)),this._isDraggingSelection)){r.type===`touchend`&&(this._isDraggingSelection=!1);return}this.isTouching=r.type===`touchstart`||r.type===`touchmove`;let o=t===0&&n===0;if(this.options.syncTouch&&i&&r.type===`touchstart`&&o&&!this.isStopped&&!this.isLocked){this.reset();return}let s=this.options.gestureOrientation===`vertical`&&n===0||this.options.gestureOrientation===`horizontal`&&t===0;if(o||s)return;let c=r.composedPath();c=c.slice(0,c.indexOf(this.rootElement));let l=this.options.prevent,u=Math.abs(t)>=Math.abs(n)?`horizontal`:`vertical`;if(c.find(e=>e instanceof HTMLElement&&(typeof l==`function`&&l?.(e)||e.hasAttribute?.(`data-lenis-prevent`)||u===`vertical`&&e.hasAttribute?.(`data-lenis-prevent-vertical`)||u===`horizontal`&&e.hasAttribute?.(`data-lenis-prevent-horizontal`)||i&&e.hasAttribute?.(`data-lenis-prevent-touch`)||a&&e.hasAttribute?.(`data-lenis-prevent-wheel`)||this.options.allowNestedScroll&&this.hasNestedScroll(e,{deltaX:t,deltaY:n}))))return;if(this.isStopped||this.isLocked){r.cancelable&&r.preventDefault();return}if(!(this.options.syncTouch&&i||this.options.smoothWheel&&a)){this.isScrolling=`native`,this.animate.stop(),r.lenisStopPropagation=!0;return}let d=n;this.options.gestureOrientation===`both`?d=Math.abs(n)>Math.abs(t)?n:t:this.options.gestureOrientation===`horizontal`&&(d=t),(!this.options.overscroll||this.options.infinite||this.options.wrapper!==window&&this.limit>0&&(this.animatedScroll>0&&this.animatedScroll<this.limit||this.animatedScroll===0&&n>0||this.animatedScroll===this.limit&&n<0))&&(r.lenisStopPropagation=!0),r.cancelable&&r.preventDefault();let f=i&&this.options.syncTouch,p=i&&r.type===`touchend`;p&&(d=Math.sign(d)*Math.abs(this.velocity)**this.options.touchInertiaExponent),this.scrollTo(this.targetScroll+d,{programmatic:!1,...f?{lerp:p?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}})};resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit(`scroll`,this)}onNativeScroll=()=>{if(this._resetVelocityTimeout!==null&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent){this._preventNextNativeScrollEvent=!1;return}if(this.isScrolling===!1||this.isScrolling===`native`){let e=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-e,this.direction=Math.sign(this.animatedScroll-e),this.isStopped||(this.isScrolling=`native`),this.emit(),this.velocity!==0&&(this._resetVelocityTimeout=setTimeout(()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()},400))}};reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){if(this.isStopped){if(this.options.autoToggle){this.rootElement.style.removeProperty(`overflow`);return}this.internalStart()}}internalStart(){this.isStopped&&(this.reset(),this.isStopped=!1,this.emit())}stop(){if(!this.isStopped){if(this.options.autoToggle){this.rootElement.style.setProperty(`overflow`,`clip`);return}this.internalStop()}}internalStop(){this.isStopped||(this.reset(),this.isStopped=!0,this.emit())}raf=e=>{let t=e-(this.time||e);this.time=e,this.animate.advance(t*.001),this.options.autoRaf&&(this._rafId=requestAnimationFrame(this.raf))};scrollTo(e,{offset:n=0,immediate:r=!1,lock:i=!1,programmatic:a=!0,lerp:o=a?this.options.lerp:void 0,duration:s=a?this.options.duration:void 0,easing:c=a?this.options.easing:void 0,onStart:l,onComplete:u,force:d=!1,userData:p}={}){if(this.prefersReducedMotion&&(a?r=!0:(o=1,s=void 0,c=void 0)),(this.isStopped||this.isLocked)&&!d)return;let m=e,h=n;if(typeof m==`string`&&[`top`,`left`,`start`,`#`].includes(m))m=0;else if(typeof m==`string`&&[`bottom`,`right`,`end`].includes(m))m=this.limit;else{let e=null;if(typeof m==`string`?(e=m.startsWith(`#`)?document.getElementById(m.slice(1)):document.querySelector(m),e||(m===`#top`?m=0:console.warn(`Lenis: Target not found`,m))):m instanceof Element&&(e=m),e){if(this.options.wrapper!==window){let e=this.rootElement.getBoundingClientRect();h-=this.isHorizontal?e.left:e.top}let t=e.getBoundingClientRect(),n=getComputedStyle(e),r=this.isHorizontal?Number.parseFloat(n.scrollMarginLeft):Number.parseFloat(n.scrollMarginTop),i=getComputedStyle(this.rootElement),a=this.isHorizontal?Number.parseFloat(i.scrollPaddingLeft):Number.parseFloat(i.scrollPaddingTop);m=(this.isHorizontal?t.left:t.top)+this.animatedScroll-(Number.isNaN(r)?0:r)-(Number.isNaN(a)?0:a)}}if(typeof m==`number`){if(m+=h,this.options.infinite){if(a){this.targetScroll=this.animatedScroll=this.scroll;let e=m-this.animatedScroll;e>this.limit/2?m-=this.limit:e<-this.limit/2&&(m+=this.limit)}}else m=t(0,m,this.limit);if(m===this.targetScroll){l?.(this),u?.(this);return}if(this.userData=p??{},r){this.animatedScroll=this.targetScroll=m,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),u?.(this),this.userData={},requestAnimationFrame(()=>{this.dispatchScrollendEvent()});return}a||(this.targetScroll=m),typeof s==`number`&&typeof c!=`function`?c=f:typeof c==`function`&&typeof s!=`number`&&(s=1),this.animate.fromTo(this.animatedScroll,m,{duration:s,easing:c,lerp:o,onStart:()=>{i&&(this.isLocked=!0),this.isScrolling=`smooth`,l?.(this)},onUpdate:(e,t)=>{this.isScrolling=`smooth`,this.lastVelocity=this.velocity,this.velocity=e-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=e,this.setScroll(this.scroll),a&&(this.targetScroll=e),t||this.emit(),t&&(this.reset(),this.emit(),u?.(this),this.userData={},requestAnimationFrame(()=>{this.dispatchScrollendEvent()}),this.preventNextNativeScrollEvent())}})}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame(()=>{this._preventNextNativeScrollEvent=!1})}hasNestedScroll(e,{deltaX:t,deltaY:n}){let r=Date.now();e._lenis||={};let i=e._lenis,a,o,s,c,l,u,d,f,p,m;if(r-(i.time??0)>2e3){i.time=Date.now();let t=window.getComputedStyle(e);if(i.computedStyle=t,a=[`auto`,`overlay`,`scroll`].includes(t.overflowX),o=[`auto`,`overlay`,`scroll`].includes(t.overflowY),l=[`auto`].includes(t.overscrollBehaviorX),u=[`auto`].includes(t.overscrollBehaviorY),i.hasOverflowX=a,i.hasOverflowY=o,!(a||o))return!1;d=e.scrollWidth,f=e.scrollHeight,p=e.clientWidth,m=e.clientHeight,s=d>p,c=f>m,i.isScrollableX=s,i.isScrollableY=c,i.scrollWidth=d,i.scrollHeight=f,i.clientWidth=p,i.clientHeight=m,i.hasOverscrollBehaviorX=l,i.hasOverscrollBehaviorY=u}else s=i.isScrollableX,c=i.isScrollableY,a=i.hasOverflowX,o=i.hasOverflowY,d=i.scrollWidth,f=i.scrollHeight,p=i.clientWidth,m=i.clientHeight,l=i.hasOverscrollBehaviorX,u=i.hasOverscrollBehaviorY;if(!(a&&s||o&&c))return!1;let h=Math.abs(t)>=Math.abs(n)?`horizontal`:`vertical`,g,_,v,y,b,x;if(h===`horizontal`)g=Math.round(e.scrollLeft),_=d-p,v=t,y=a,b=s,x=l;else if(h===`vertical`)g=Math.round(e.scrollTop),_=f-m,v=n,y=o,b=c,x=u;else return!1;return!x&&(g>=_||g<=0)?!0:(v>0?g<_:g>0)&&y&&b}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?`x`:`y`]}get isHorizontal(){return this.options.orientation===`horizontal`}get actualScroll(){let e=this.options.wrapper;return this.isHorizontal?e.scrollX??e.scrollLeft:e.scrollY??e.scrollTop}get scroll(){return this.options.infinite?i(this.animatedScroll,this.limit):this.animatedScroll}get progress(){return this.limit===0?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(e){this._isScrolling!==e&&(this._isScrolling=e,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(e){this._isStopped!==e&&(this._isStopped=e,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(e){this._isLocked!==e&&(this._isLocked=e,this.updateClassName())}get isSmooth(){return this.isScrolling===`smooth`}get prefersReducedMotion(){return this.options.respectReducedMotion&&this.reducedMotionMediaQuery.matches}get className(){let e=`lenis`;return this.options.autoToggle&&(e+=` lenis-autoToggle`),this.isStopped&&(e+=` lenis-stopped`),this.isLocked&&(e+=` lenis-locked`),this.isScrolling&&(e+=` lenis-scrolling`),this.isScrolling===`smooth`&&(e+=` lenis-smooth`),e}updateClassName(){this.cleanUpClassName(),this.className.split(` `).forEach(e=>{this.rootElement.classList.add(e)})}cleanUpClassName(){for(let e of Array.from(this.rootElement.classList))(e===`lenis`||e.startsWith(`lenis-`))&&this.rootElement.classList.remove(e)}};globalThis.Lenis=p,globalThis.Lenis.prototype=p.prototype})();
+</script>
+<script>
+(function () {
+  "use strict";
+
+  /* Settings come from the studs-config block above. If it is missing or broken, the links already in the page stay. */
+  var CONFIG = { url: "", title: document.title, text: "" };
+  try {
+    var cfg = JSON.parse(document.getElementById("studs-config").textContent);
+    for (var key in cfg) { if (Object.prototype.hasOwnProperty.call(cfg, key) && typeof cfg[key] === "string") CONFIG[key] = cfg[key]; }
+  } catch (err) { /* keep the defaults */ }
+  var urlOK = /^https:\/\/[^\s"'<>]+$/.test(CONFIG.url);
+
+  var root = document.documentElement;
+  root.classList.remove("no-js");
+  root.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var fine = window.matchMedia("(pointer: fine)");
+  function $(sel, ctx) { return (ctx || document).querySelector(sel); }
+  function $$(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
+  function clamp01(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function listen(mq, fn) { if (mq.addEventListener) mq.addEventListener("change", fn); else mq.addListener(fn); }
+
+  if (urlOK) $$("[data-donate]").forEach(function (a) { a.href = CONFIG.url; });
+
+  /* ---------- Sharing */
+  var statusEl = document.getElementById("share-status");
+  var statusTimer = 0;
+  function say(message) {
+    statusEl.textContent = message;
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(function () { statusEl.textContent = ""; }, 8000);
+  }
+  var urlField = document.getElementById("share-url");
+  if (urlOK) urlField.value = CONFIG.url;
+  var shareUrl = urlField.value;
+
+  function nativeShare() {
+    if (!navigator.share) return Promise.resolve("unsupported");
+    return navigator.share({ title: CONFIG.title, text: CONFIG.text, url: shareUrl })
+      .then(function () { return "shared"; })
+      .catch(function (err) { return err && err.name === "AbortError" ? "cancelled" : "blocked"; });
+  }
+  var BLOCKED = "Sharing isn’t available here. Use Copy link instead.";
+  var nativeBtn = document.getElementById("share-native");
+  if (navigator.share) {
+    nativeBtn.hidden = false;
+    nativeBtn.addEventListener("click", function () {
+      nativeShare().then(function (r) { if (r === "blocked") say(BLOCKED); });
+    });
+  }
+  var sharePanel = document.getElementById("share");
+  $$("[data-share]").forEach(function (el) {
+    el.addEventListener("click", function (event) {
+      event.preventDefault();
+      nativeShare().then(function (r) {
+        if (r === "shared" || r === "cancelled") return;
+        scrollToEl(sharePanel);
+        sharePanel.focus({ preventScroll: true });
+        if (r === "blocked") say(BLOCKED);
+      });
+    });
+  });
+  var copyBtn = document.getElementById("share-copy");
+  copyBtn.hidden = false;
+  copyBtn.addEventListener("click", function () {
+    function fallback() {
+      urlField.focus(); urlField.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      say(ok ? "Link copied" : "The link is selected. Copy it from the box.");
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareUrl).then(function () { say("Link copied"); }, fallback);
+    } else { fallback(); }
+  });
+
+  /* ---------- Sticky donate: shown once the hero buttons have gone, hidden from the donate section down */
+  var sticky = $(".sticky-donate");
+  var heroActions = $(".hero-actions");
+  var endZone = [document.getElementById("donate"), $(".site-footer")];
+  var heroGone = false, endSeen = [false, false];
+  function updateSticky() { sticky.classList.toggle("is-visible", heroGone && !endSeen[0] && !endSeen[1]); }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.target === heroActions && !motion) heroGone = !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
+        var k = endZone.indexOf(entry.target);
+        if (k > -1) endSeen[k] = entry.isIntersecting;
+      });
+      updateSticky();
+    });
+    io.observe(heroActions);
+    endZone.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Motion.
+     Nothing plays on a timer: every value below is worked out from the scroll position, so the page
+     moves at the reader's speed and runs backwards when they scroll up. One animation loop eases a
+     copy of the scroll position (vs) towards the real one and redraws every scene from it. */
+  var motion = false, ticking = false, lenis = null, vs = 0, vw = 0, vh = 0, G = null, EASE = 0.16;
+  var touched = [];
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+  function easeIn(t) { return t * t * t; }
+  function easeInOut(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function smooth(t) { return t * t * (3 - 2 * t); }
+  function put(el, prop, val) {
+    var c = el._css;
+    if (!c) { c = el._css = {}; touched.push(el); }
+    if (c[prop] !== val) { c[prop] = val; el.style[prop] = val; }
+  }
+  function tf(el, x, y) { put(el, "transform", "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px,0)"); }
+  function fadeIn(el, q, dist, blur) {
+    var e = easeOut(q);
+    tf(el, 0, (1 - e) * dist);
+    put(el, "opacity", (0.06 + 0.94 * e).toFixed(3));
+    if (blur) put(el, "filter", q >= 1 ? "none" : "blur(" + ((1 - e) * blur).toFixed(2) + "px)");
+  }
+  function docTop(el) { var y = 0; while (el) { y += el.offsetTop; el = el.offsetParent; } return y; }
+
+  var NAVY = [12, 26, 51], PAPER = [243, 245, 246], GREEN = [125, 194, 66];
+  var body = document.body;
+
+  var heroSec = $(".hero"), heroPin = $(".hero-pin"), heroSlot = $(".hero-slot"), heroPhoto = $(".hero-photo");
+  var heroImg = heroPhoto.querySelector("img"), heroWash = $(".hero-wash");
+  var heroBig = $(".ht-big"), heroSub = $(".ht-sub"), heroLede = $(".hero-lede");
+  var IW = 1600, IH = 900;
+
+  var causeTitle = $(".cause-title"), causeLede = $(".cause-lede"), facts = $$(".fact");
+  var causeFrame = $(".cause-photo"), causeImg = causeFrame.querySelector("img");
+
+  var challengeSec = document.getElementById("challenge");
+  var acroTitle = $(".acro"), acroRest = $$(".acro-rest"), acroNote = $(".acro-note");
+  var cols = $$(".wall-col"), COL_SPEED = [0.3, -0.16, 0.46];
+  var walls = $$(".wall").map(function (w) {
+    return { el: w, cols: $$(".wall-col", w), items: $$(".wall-item", w).map(function (it) { return { el: it, home: it.parentNode }; }) };
+  });
+  var raceHead = $(".race-head"), raceLines = $$(".race-title .sl"), raceFeature = $(".race-feature");
+  /* Phones show two columns, so the third column's photos join whichever of the first two is shorter.
+     Desktop keeps all three columns as written. */
+  var SHAPE = { portrait: 4 / 3, upright: 3 / 2, tall: 1386 / 800, landscape: 3 / 4, wide: 2 / 3 };
+  function frameH(el) { for (var k in SHAPE) if (el.classList.contains(k)) return SHAPE[k]; return 3 / 4; }
+  function arrangeWalls() {
+    var two = window.innerWidth < 960;
+    walls.forEach(function (w) {
+      w.items.forEach(function (it) { it.home.appendChild(it.el); });
+      if (!two) return;
+      var h = [0, 0.28];
+      w.items.forEach(function (it) { var i = w.cols.indexOf(it.home); if (i < 2) h[i] += frameH(it.el); });
+      w.items.filter(function (it) { return it.home === w.cols[2]; })
+        .sort(function (a, b) { return frameH(b.el) - frameH(a.el); })
+        .forEach(function (it) { var i = h[0] <= h[1] ? 0 : 1; w.cols[i].appendChild(it.el); h[i] += frameH(it.el); });
+    });
+  }
+
+  var socialSec = document.getElementById("social"), socialHead = $(".social-head");
+  var socialItems = $$(".social-item"), socialLines = $$(".social-title .sl");
+
+  var tallies = $$(".tally").map(function (el) { return { label: $(".s1-label", el), fig: $(".s1-figure", el), text: $(".s1-text", el) }; });
+  var donateSec = document.getElementById("donate"), words = $$(".donate-title .w");
+  var causeSec = document.getElementById("cause"), s1Sec = $(".season1"), tones = $$(".tone");
+
+  function measure() {
+    vw = window.innerWidth; vh = window.innerHeight;
+    arrangeWalls();
+    measureTint();
+    var g = {};
+    var pinR = heroPin.getBoundingClientRect(), slotR = heroSlot.getBoundingClientRect();
+    g.hero = {
+      top: docTop(heroSec), travel: Math.max(1, heroSec.offsetHeight - heroPin.offsetHeight),
+      W: heroPin.clientWidth, H: heroPin.clientHeight,
+      sx: slotR.left - pinR.left, sy: slotR.top - pinR.top, sw: slotR.width, sh: slotR.height
+    };
+    /* The photo keeps the size it has in its frame; scaling up for the full screen is a transform,
+       so the browser still sees the same photo at the same size */
+    var H0 = g.hero;
+    H0.s0 = Math.max(H0.sw / IW, H0.sh / IH);
+    H0.x0 = H0.sx + (H0.sw - IW * H0.s0) * 0.5; H0.y0 = H0.sy + (H0.sh - IH * H0.s0) * 0.64;
+    heroImg.style.width = (IW * H0.s0).toFixed(2) + "px"; heroImg.style.height = (IH * H0.s0).toFixed(2) + "px";
+    heroImg.style.left = H0.x0.toFixed(2) + "px"; heroImg.style.top = H0.y0.toFixed(2) + "px";
+    g.cause = { title: docTop(causeTitle), lede: docTop(causeLede), facts: facts.map(docTop), frame: docTop(causeFrame), frameH: causeFrame.offsetHeight };
+    g.acro = { top: docTop(acroTitle), note: docTop(acroNote) };
+    g.walls = walls.map(function (w) {
+      var W = { top: docTop(w.el), h: w.el.offsetHeight, cols: [] };
+      w.cols.forEach(function (col, i) {
+        if (col.offsetParent === null || !col.children.length) return;
+        W.cols.push({ el: col, speed: COL_SPEED[i], top: col.offsetTop, items: Array.prototype.map.call(col.children, function (item) {
+          return { el: item, img: item.firstElementChild, top: item.offsetTop, h: item.offsetHeight };
+        }) });
+      });
+      return W;
+    });
+    g.race = { head: docTop(raceHead), headH: raceHead.offsetHeight };
+    g.feature = { el: raceFeature, img: raceFeature.querySelector("img"), top: docTop(raceFeature), h: raceFeature.offsetHeight };
+    g.social = {
+      head: docTop(socialHead), headH: socialHead.offsetHeight,
+      items: socialItems.map(function (el) { return { el: el, img: el.querySelector("img"), top: docTop(el), h: el.offsetHeight }; })
+    };
+    g.social.bottom = Math.max.apply(null, g.social.items.map(function (it) { return it.top + it.h; }));
+    g.s1 = tallies.map(function (t) { return { label: docTop(t.label), fig: docTop(t.fig), text: docTop(t.text) }; });
+    g.donate = docTop(donateSec);
+    /* Photos further down start loading three screens ahead, so fast scrolling never shows an empty frame */
+    g.lazy = $$('img[loading="lazy"]').map(function (img) { return { img: img, top: docTop(img.parentNode) }; });
+    /* Background colour: [colour from, colour to, A, B, sections, see-through from, see-through to, follows the eased scene].
+       The hero and the STUDS section are both navy, so the first change is navy to paper at the hospital.
+       While an edge is anywhere on screen (plus a margin either side), every section on screen is see-through
+       and shows the page colour, so the whole screen changes colour as one, with no line between sections, as
+       the edge crosses the middle. It follows the real scroll position, so the colour always matches where the
+       edge actually is and no section ever shows its own colour part-way through a change. */
+    var maxScroll = document.documentElement.scrollHeight - vh;
+    g.segs = [];
+    [[causeSec, NAVY, PAPER], [donateSec, PAPER, GREEN]].forEach(function (b) {
+      var t = docTop(b[0]), c0 = t - 0.72 * vh, c1 = Math.max(c0 + 40, Math.min(t - 0.28 * vh, maxScroll - 2));
+      g.segs.push([c0, c1, b[1], b[2], [b[0]], t - 1.35 * vh, t + 0.35 * vh, false]);
+    });
+    g.toneBox = tones.map(function (sec) { var y = docTop(sec); return [y, y + sec.offsetHeight]; });
+    G = g;
+  }
+
+  function render() {
+    var s = vs, i, q;
+    for (i = 0; i < G.lazy.length; i++) {
+      if (!G.lazy[i].done && s + vh * 3 > G.lazy[i].top) { G.lazy[i].done = true; G.lazy[i].img.loading = "eager"; }
+    }
+
+    /* Background colour */
+    var rs = window.pageYOffset, c = NAVY, ss;
+    for (i = 0; i < G.segs.length; i++) {
+      var sg = G.segs[i];
+      ss = sg[7] ? s : rs;
+      if (ss <= sg[0]) break;
+      var t = smooth(clamp01((ss - sg[0]) / (sg[1] - sg[0])));
+      c = [0, 1, 2].map(function (k) { return Math.round(lerp(sg[2][k], sg[3][k], t)); });
+      if (t < 1) break;
+    }
+    put(body, "backgroundColor", "rgb(" + c.join(",") + ")");
+    var blending = [];
+    for (i = 0; i < G.segs.length; i++) {
+      ss = G.segs[i][7] ? s : rs;
+      if (!(ss > G.segs[i][5] && ss < G.segs[i][6])) continue;
+      for (var k = 0; k < tones.length; k++) {
+        if (G.toneBox[k][0] < rs + vh * 1.35 && G.toneBox[k][1] > rs - vh * 0.35) blending.push(tones[k]);
+      }
+    }
+    tones.forEach(function (sec) {
+      var on = blending.indexOf(sec) > -1;
+      if (sec._blend !== on) { sec._blend = on; sec.classList.toggle("blend", on); }
+    });
+
+    /* Hero: the photo window opens from its frame to the full screen while the camera pushes in,
+       the headline parts, then the screen fades to navy and the STUDS section rises into it */
+    var H = G.hero;
+    if (s < H.top + H.travel + vh) {
+      var p = clamp01((s - H.top) / H.travel);
+      var e = easeInOut(clamp01(p / 0.55));
+      var rx = H.sx * (1 - e), ry = H.sy * (1 - e), rw = lerp(H.sw, H.W, e), rh = lerp(H.sh, H.H, e);
+      put(heroPhoto, "clipPath", "inset(" + ry.toFixed(1) + "px " + (H.W - rx - rw).toFixed(1) + "px " + (H.H - ry - rh).toFixed(1) + "px " + rx.toFixed(1) + "px)");
+      var S = Math.max(rw / IW, rh / IH) * (1 + 0.08 * easeOut(clamp01((p - 0.2) / 0.55)));
+      var ix = rx + (rw - IW * S) * 0.5, iy = ry + (rh - IH * S) * (0.64 - 0.06 * e);
+      put(heroImg, "transform", "translate(" + (ix - H.x0).toFixed(2) + "px," + (iy - H.y0).toFixed(2) + "px) scale(" + (S / H.s0).toFixed(5) + ")");
+      var part = easeIn(clamp01(p / 0.5)), gone = (1 - clamp01((p - 0.06) / 0.34)).toFixed(3);
+      tf(heroBig, -part * 0.6 * H.W, 0); put(heroBig, "opacity", gone);
+      tf(heroSub, part * 0.6 * H.W, 0); put(heroSub, "opacity", gone);
+      q = clamp01(p / 0.22);
+      tf(heroLede, 0, q * 24); put(heroLede, "opacity", (1 - q).toFixed(3));
+      tf(heroActions, 0, q * 24); put(heroActions, "opacity", (1 - q).toFixed(3));
+      put(heroActions, "visibility", q >= 1 ? "hidden" : "visible");
+      put(heroWash, "opacity", smooth(clamp01((p - 0.4) / 0.28)).toFixed(3));
+    }
+
+    /* Hospital: the heading sharpens into view, facts slide in, the photo opens and settles.
+       No upper limit, so a fast flick past the section still leaves everything in its finished state. */
+    var C = G.cause;
+    if (s + vh > C.title - 100) {
+      fadeIn(causeTitle, clamp01((s + vh - C.title) / (vh * 0.5)), 48, 12);
+      fadeIn(causeLede, clamp01((s + vh - C.lede) / (vh * 0.45)), 32, 0);
+      facts.forEach(function (row, n) {
+        var qf = easeOut(clamp01((s + vh - C.facts[n]) / (vh * 0.4)));
+        tf(row, (1 - qf) * 56, 0); put(row, "opacity", (0.1 + 0.9 * qf).toFixed(3));
+      });
+      var qp = easeOut(clamp01((s + vh - C.frame) / (vh * 0.75)));
+      var pass = clamp01((s + vh - C.frame) / (vh + C.frameH));
+      put(causeFrame, "clipPath", qp >= 1 ? "none" : "inset(" + ((1 - qp) * 16).toFixed(2) + "% " + ((1 - qp) * 9).toFixed(2) + "%)");
+      tf(causeFrame, 0, (0.5 - pass) * (vw >= 960 ? 0.2 : 0.08) * vh);
+      put(causeImg, "transform", "scale(" + (1 + 0.16 * (1 - qp)).toFixed(4) + ")");
+    }
+
+    /* Acronym: as the heading arrives, every letter opens into its word at once,
+       then the line about Busselton comes into focus */
+    var A = G.acro;
+    if (s + vh > A.top - 100 && s < A.note + vh) {
+      var ew = easeInOut(clamp01((s + vh * 0.8 - A.top) / (vh * 0.35)));
+      acroRest.forEach(function (rest) {
+        put(rest, "clipPath", ew >= 1 ? "none" : "inset(-0.2em " + ((1 - ew) * 100).toFixed(2) + "% -0.2em 0)");
+        put(rest.firstElementChild, "transform", "translate3d(" + (-(1 - ew) * 100).toFixed(2) + "%,0,0)");
+      });
+      fadeIn(acroNote, clamp01((s + vh * 0.85 - A.note) / (vh * 0.3)), 28, 10);
+    }
+
+    /* Training and racing photos: columns drift at different speeds; each photo opens from a slit */
+    G.walls.forEach(function (Wl) {
+      if (!(s + vh * 1.5 > Wl.top && s < Wl.top + Wl.h + vh * 0.5)) return;
+      var pw = clamp01((s + vh - Wl.top) / (vh + Wl.h));
+      Wl.cols.forEach(function (col) {
+        var cy = (0.5 - pw) * col.speed * vh;
+        tf(col.el, 0, cy);
+        col.el._cy = cy;
+        col.items.forEach(function (it) {
+          var top = Wl.top + col.top + cy + it.top - s;
+          var open = (1 - easeOut(clamp01((vh - top) / (vh * 0.6)))) * 18;
+          put(it.el, "clipPath", open <= 0.01 ? "none" : "inset(" + open.toFixed(2) + "% 0 " + open.toFixed(2) + "% 0)");
+        });
+      });
+    });
+
+    /* Race days: the headline words slide past each other, like the drinks headline */
+    var Rc = G.race;
+    if (s + vh > Rc.head - 100 && s < Rc.head + Rc.headH + vh) {
+      var pr = clamp01((s + vh - Rc.head) / (vh + Rc.headH));
+      tf(raceLines[0], (0.5 - pr) * 0.16 * vw, 0);
+      tf(raceLines[1], -(0.5 - pr) * 0.16 * vw, 0);
+    }
+    /* The squad and families at the Phuket finish: the photo opens as it arrives and settles at its full size */
+    var F = G.feature;
+    if (s + vh > F.top - 100 && s < F.top + F.h + 100) {
+      var qf = easeOut(clamp01((s + vh - F.top) / (vh * 0.55)));
+      put(F.el, "clipPath", qf >= 1 ? "none" : "inset(" + ((1 - qf) * 12).toFixed(2) + "% " + ((1 - qf) * 6).toFixed(2) + "%)");
+      put(F.img, "transform", "scale(" + (1 + 0.06 * (1 - qf)).toFixed(4) + ")");
+    }
+
+    /* Social: the headline words slide past each other; each photo opens as it arrives and drifts inside its frame */
+    var So = G.social;
+    if (s + vh > So.head - 100 && s < So.bottom + 100) {
+      var pt = clamp01((s + vh - So.head) / (vh + So.headH));
+      tf(socialLines[0], (0.5 - pt) * 0.16 * vw, 0);
+      tf(socialLines[1], -(0.5 - pt) * 0.16 * vw, 0);
+      So.items.forEach(function (it) {
+        var qi = easeOut(clamp01((s + vh - it.top) / (vh * 0.55)));
+        put(it.el, "clipPath", qi >= 1 ? "none" : "inset(" + ((1 - qi) * 12).toFixed(2) + "% " + ((1 - qi) * 6).toFixed(2) + "%)");
+        put(it.img, "transform", "scale(" + (1 + 0.1 * (1 - qi)).toFixed(4) + ")");
+      });
+    }
+
+    /* Season 1: the total comes into focus */
+    G.s1.forEach(function (P, n) {
+      if (s + vh <= P.label - 100) return;
+      var T = tallies[n];
+      fadeIn(T.label, clamp01((s + vh - P.label) / (vh * 0.4)), 20, 0);
+      var qs = clamp01((s + vh - P.fig) / (vh * 0.5)), es = easeOut(qs);
+      tf(T.fig, (clamp01((s + vh - P.fig) / (vh * 1.4)) - 0.5) * 0.06 * vw, (1 - es) * 24);
+      put(T.fig, "opacity", (0.06 + 0.94 * es).toFixed(3));
+      put(T.fig, "filter", qs >= 1 ? "none" : "blur(" + ((1 - es) * 14).toFixed(2) + "px)");
+      fadeIn(T.text, clamp01((s + vh - P.text) / (vh * 0.45)), 24, 0);
+    });
+
+    /* Donate headline: words slide in from alternate sides */
+    if (s + vh * 1.3 > G.donate) {
+      var qd = easeOut(clamp01((s + vh - G.donate) / (vh * 0.75)));
+      words.forEach(function (w, n) { tf(w, (1 - qd) * (n % 2 ? 1 : -1) * 0.24 * vw, 0); });
+    }
+
+    paintTint(s);
+  }
+
+  function frame() {
+    ticking = false;
+    if (!motion) return;
+    var target = window.pageYOffset;
+    var d = target - vs;
+    vs = Math.abs(d) < 0.3 ? target : vs + d * EASE;
+    render();
+    /* Sticky donate follows the real scroll position, not the eased one */
+    var gone = target > G.hero.top + 0.25 * G.hero.travel;
+    if (gone !== heroGone) { heroGone = gone; updateSticky(); }
+    if (vs !== target) requestFrame();
+  }
+  function requestFrame() { if (!ticking) { ticking = true; window.requestAnimationFrame(frame); } }
+
+  function scrollToEl(el) {
+    if (lenis) lenis.scrollTo(el);
+    else el.scrollIntoView({ behavior: motion ? "smooth" : "auto", block: "start" });
+  }
+
+  function startLenis() {
+    if (lenis || !fine.matches || typeof window.Lenis !== "function") return;
+    try {
+      lenis = new window.Lenis({ lerp: 0.1, smoothWheel: true, autoRaf: true });
+    } catch (err) { lenis = null; }
+  }
+  function stopLenis() { if (lenis) { lenis.destroy(); lenis = null; } }
+
+  /* Motion follows the device setting: visitors who ask for reduced motion get the still page */
+  function roomy() { return window.innerHeight >= 480; }
+  function wanted() { return roomy() && !reduce.matches; }
+
+  function setMode() {
+    var on = wanted();
+    if (on === motion) return;
+    motion = on;
+    root.classList.toggle("motion", on);
+    if (on) {
+      try {
+        measure();
+        vs = window.pageYOffset;
+        startLenis();
+        EASE = lenis ? 0.5 : (fine.matches ? 0.16 : 0.24);
+        render();
+        frame();
+      } catch (err) {
+        motion = false;
+        root.classList.remove("motion");
+        reset();
+      }
+    } else {
+      stopLenis();
+      reset();
+      heroSizes("100vw");
+      heroGone = heroActions.getBoundingClientRect().bottom < 0;
+      updateSticky();
+      arrangeWalls();
+      retint();
+    }
+  }
+  /* The hero needs a larger file only when it opens out to the full screen */
+  function heroSizes(v) { $$("source, img", heroPhoto).forEach(function (el) { if (el.getAttribute("sizes") !== v) el.setAttribute("sizes", v); }); }
+  function reset() {
+    touched.forEach(function (el) {
+      el.style.transform = ""; el.style.opacity = ""; el.style.filter = ""; el.style.clipPath = ""; el.style.visibility = ""; el.style.backgroundColor = "";
+      el._css = null;
+    });
+    touched = [];
+    tones.forEach(function (sec) { sec._blend = false; sec.classList.remove("blend"); });
+    cols.forEach(function (col) { col._cy = 0; });
+    heroImg.style.width = heroImg.style.height = heroImg.style.left = heroImg.style.top = "";
+  }
+
+  /* In-page links glide with the smooth scroll on desktop and still move keyboard focus */
+  document.addEventListener("click", function (event) {
+    if (!lenis || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey) return;
+    var a = event.target.closest ? event.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var target = document.getElementById(a.getAttribute("href").slice(1));
+    if (!target) return;
+    event.preventDefault();
+    lenis.scrollTo(target === document.getElementById("top") ? 0 : target);
+    if (target.hasAttribute("tabindex")) target.focus({ preventScroll: true });
+  });
+
+  var lastW = window.innerWidth, lastH = window.innerHeight;
+  function onResize() {
+    var w = window.innerWidth, h = window.innerHeight;
+    /* Phones resize the window when the address bar slides away; the layout does not depend on that */
+    if (w === lastW && Math.abs(h - lastH) < 160) return;
+    lastW = w; lastH = h;
+    if (wanted() !== motion) { setMode(); return; }
+    if (motion) { measure(); requestFrame(); } else { arrangeWalls(); retint(); }
+  }
+  function remeasure() { if (motion) { measure(); requestFrame(); } else retint(); }
+  /* The larger hero file is fetched on the first scroll, when the photo starts to open out */
+  window.addEventListener("scroll", function upgrade() {
+    if (!motion) return;
+    heroSizes("(min-width: 960px) 100vw, 200vw");
+    window.removeEventListener("scroll", upgrade);
+  }, { passive: true });
+
+  /* ---------- Colour.
+     Photos below the first screen start with the navy tint and reach full colour as they scroll into view,
+     and fade back if you scroll up past them. Nothing moves, so this runs for reduced motion too.
+     Without JavaScript every photo is simply in colour. */
+  var tinted = $$(".cause-photo img, .wall-item img, .social-item img, .race-feature img").map(function (img) {
+    return { img: img, frame: img.parentElement, col: img.closest(".wall-col"), top: 0, g: -1 };
+  });
+  function measureTint() { tinted.forEach(function (t) { t.col = t.img.closest(".wall-col"); t.top = docTop(t.frame); }); }
+  function paintTint(s, force) {
+    var h = window.innerHeight;
+    for (var i = 0; i < tinted.length; i++) {
+      var t = tinted[i];
+      var top = t.top + (t.col && t.col._cy ? t.col._cy : 0);
+      /* grey while the top edge is at the bottom of the screen, full colour once it has travelled 60% of the way up */
+      var g = Math.round((1 - smooth(clamp01((s + h - top) / (h * 0.6)))) * 50) / 50;
+      if (g !== t.g || force) { t.g = g; t.frame.style.setProperty("--tint", g); }
+    }
+  }
+  var tintTicking = false;
+  function requestTint() {
+    if (motion || tintTicking) return;
+    tintTicking = true;
+    window.requestAnimationFrame(function () { tintTicking = false; if (!motion) paintTint(window.pageYOffset); });
+  }
+  function retint() { measureTint(); paintTint(motion ? vs : window.pageYOffset, true); }
+  window.addEventListener("scroll", requestTint, { passive: true });
+  arrangeWalls();
+  retint();
+
+  setMode();
+  window.addEventListener("scroll", requestFrame, { passive: true });
+  window.addEventListener("resize", onResize);
+  window.addEventListener("load", remeasure);
+  listen(reduce, setMode);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
+})();
+</script>
+</body>
+</html>
