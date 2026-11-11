@@ -28,6 +28,7 @@ README.txt             the short guide for people
 netlify.toml           Netlify settings: publish the public folder exactly as written
 tools/update_csp.py    refreshes the script hashes in public/_headers; run it after editing any script
 tools/check_layout.py  loads both pages at phone and desktop sizes and reports layout problems
+tools/photo.py         prepares a new wall photo (all four files) and prints the markup to paste
 public/                everything the site serves
   index.html           the fundraising page: HTML, CSS and both scripts inline
   about.html           the About page: HTML and CSS, no JavaScript
@@ -61,17 +62,12 @@ Edit the text inside the right section of index.html or about.html. Keep headlin
 ### Add or replace a photo
 
 1. Get the original from the owner. Check that it is a real photo and that everyone in it is whole.
-2. Cut it to one of the frame shapes and save it as a JPEG at about quality 78, without EXIF data (EXIF can hold the place it was taken):
-   - portrait 3:4: 750 x 1000
-   - upright 2:3: 667 x 1000
-   - landscape 4:3: 1000 x 750
-   - wide 3:2: 1000 x 667
-   - tall: 800 x 1386 (used only for the Laguna runner)
-3. Save it in public/images/ under a new file name (browsers keep images for a week): `training-*.jpg` for training, `race-*.jpg` for racing.
-4. Add a figure to the shortest column of the right wall. Use the matching shape class and the file's width and height, and write alt text that says who is in it and what is happening, without names:
+2. Pick the frame shape closest to the photo, so nobody gets cut off: portrait (3:4), upright (2:3), landscape (4:3) or wide (3:2). (A fifth shape, tall, is used only for the Laguna runner.)
+3. Run `python3 tools/photo.py <original> <new-name> <shape>`, for example `python3 tools/photo.py ~/Downloads/IMG_1234.jpg training-swim landscape`. Use a name that hasn't been used before (browsers keep images for a week): `training-*` for training, `race-*` for racing. It writes four files to public/images/ (full size and 600px wide, each as JPEG and WebP), strips the EXIF data (which can hold the place it was taken), and prints the markup.
+4. Paste the markup into the shortest column of the right wall, and replace the alt text with a description of who is in the photo and what is happening, without names. The markup looks like this:
 
    ```html
-   <figure class="wall-item plx landscape"><img src="images/training-new.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Four STUDS members riding along East Coast Park at dawn"></figure>
+   <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-swim-600.webp 600w, images/training-swim.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/training-swim.jpg" srcset="images/training-swim-600.jpg 600w, images/training-swim.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="Four STUDS members swimming at Sentosa at dawn"></picture></figure>
    ```
 
 5. The frame's shape must match the file's shape, or people get cropped. tools/check_layout.py reports any cropped photo.
@@ -99,6 +95,7 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - Photo walls (`.wall`): three `.wall-col` columns of `figure.wall-item`. The shape class on each figure sets the shape of its frame. On phones the script moves the third column's photos into the two columns shown (`arrangeWalls`). With motion on, the columns drift at different speeds and each photo opens from a slit.
 - Recovery drinks: two `.social-row` groups. Each figure carries `style="--a: …"` with its photo's width divided by its height, so every desktop row fills the width with each photo whole. On phones the rows turn into a two-column mosaic.
 - Photos fade from a navy tint to full colour as they scroll into view (`paintTint`).
+- Photo files: every photo is served as WebP, with the JPEG as a fallback, inside `<picture>`. Wall photos also have 600px-wide copies, which phones and ordinary screens use. Once the page has loaded, the script fetches the remaining photos quietly, three at a time, so they are ready before visitors scroll to them. Keep new photos to this pattern: the page was slow on phones when it sent full-size photos.
 - On phones, a floating Donate button appears once the hero has scrolled away. Share opens the phone's share menu, with Copy link as the fallback.
 
 ## Checking a change
@@ -110,7 +107,7 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 ## Publishing
 
 - Netlify project: "studs-sg", site ID `c904b41a-d842-4734-82aa-f3e8372f083f`. Publish directory: `public`. No build command.
-- The live address for now is https://studs-sg.netlify.app. studs.sg is set up in Netlify as the main domain but wasn't working yet: it was waiting on the .sg registry. Until it works, the links that have to be full addresses (canonical, link previews, structured data, sitemap.xml, robots.txt and llms.txt) use `https://studs-sg.netlify.app/`. Once studs.sg works, replace `https://studs-sg.netlify.app/` with `https://studs.sg/` in public/index.html, about.html, llms.txt, robots.txt and sitemap.xml, run tools/update_csp.py to be safe, and publish.
+- The address is https://studs.sg (www.studs.sg and studs-sg.netlify.app reach the same site). Netlify provides the security certificate and sends http visitors to https. Links that must be full addresses (canonical, link previews, structured data, sitemap.xml, robots.txt and llms.txt) use `https://studs.sg/`.
 - Don't make studscharity.com or studsfoundation.com the main address while the charity registration is pending.
 - To publish: if the site is in a GitHub repository linked to the Netlify project, push to the main branch. Otherwise drag the public folder onto the project's Deploys page in Netlify, or use the Netlify CLI: `netlify deploy --prod --dir public --site c904b41a-d842-4734-82aa-f3e8372f083f`.
 - Afterwards, open the live site on a phone and a desktop and check that it loads and moves as you scroll.
@@ -123,3 +120,4 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - Photo frames match the photos' shapes, and the drift inside frames that cut off people at the edges was removed.
 - Big type is capped at the 1440px layout width.
 - The hospital section comes after the STUDS section and before Recovery drinks.
+- Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.

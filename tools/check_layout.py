@@ -63,7 +63,7 @@ PHOTO_CHECK = r"""() => {
   for (const img of document.images) {
     if (img.complete && img.naturalWidth === 0) { out.push('photo missing: ' + img.src.split('/').pop()); continue; }
     if (!img.closest('.wall-item, .social-item, .race-feature, .cause-photo') || !img.naturalWidth) continue;
-    const box = img.getBoundingClientRect(), frame = img.parentElement.getBoundingClientRect();
+    const box = img.getBoundingClientRect(), frame = img.closest('.wall-item, .social-item, .race-feature, .cause-photo').getBoundingClientRect();
     if (frame.width < 2) continue;
     const s = Math.max(box.width / img.naturalWidth, box.height / img.naturalHeight);
     const vx = Math.min(frame.width, img.naturalWidth * s) / (img.naturalWidth * s), vy = Math.min(frame.height, img.naturalHeight * s) / (img.naturalHeight * s);

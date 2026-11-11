@@ -1,7 +1,7 @@
 # Security and caching headers for Netlify or Cloudflare Pages (other hosts: see README.txt).
 # The script-src hashes match the two inline scripts in index.html. Run tools/update_csp.py after editing a script.
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-7GK3zKpTnY5WGHT3zAbELmMPERvrCVLLmk6Gl0N0/8o=' 'sha256-6yY4YC4RZIdhRlbXjYQZ2r9eChUmYh1m7ylbEbRDe98='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self' 'sha256-7GK3zKpTnY5WGHT3zAbELmMPERvrCVLLmk6Gl0N0/8o=' 'sha256-LIuk64Tod5EggNtONUrjbDgZQn0tnlqTbLXMvDbO2dI='; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()

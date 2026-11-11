@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://studs-sg.netlify.app/sitemap.xml
+Sitemap: https://studs.sg/sitemap.xml

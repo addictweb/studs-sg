@@ -1,6 +1,6 @@
 # STUDS
 
-> STUDS (Support Through United Dad Strength) is a group of Singapore men who train together and take on endurance races to raise money for a different charity each year. Formed in Singapore in 2025. Website: https://studs-sg.netlify.app/ (about the group: https://studs-sg.netlify.app/about.html)
+> STUDS (Support Through United Dad Strength) is a group of Singapore men who train together and take on endurance races to raise money for a different charity each year. Formed in Singapore in 2025. Website: https://studs.sg/ (about the group: https://studs.sg/about.html)
 
 ## Season 2 (2026)
 
@@ -29,4 +29,4 @@
 - STUDS is not a registered charity. Each year the group votes on a charity, and donations go straight to it.
 - Sponsors: Boomarang Bistro & Bar (https://www.boomarang.com.sg/) and Tsunami (https://www.tsunami-sport.com/)
 - Motto: outrun the drinkers, outdrink the runners, and look after each other’s physical and mental wellbeing
-- Sponsorship: the sponsorship button on https://studs-sg.netlify.app/about.html opens a WhatsApp message to the group
+- Sponsorship: the sponsorship button on https://studs.sg/about.html opens a WhatsApp message to the group

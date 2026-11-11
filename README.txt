@@ -14,21 +14,22 @@ WHAT'S HERE
   netlify.toml          Netlify settings: no build step, publish the public folder as written.
   tools/update_csp.py   Run after editing either script in index.html (see SECURITY).
   tools/check_layout.py Loads both pages at phone and desktop sizes and reports anything broken.
+  tools/photo.py        Prepares a new photo for the photo walls.
   AGENTS.md, CLAUDE.md  The guide for AI assistants (and anyone editing in depth).
 
 PUBLISH
   Netlify project "studs-sg". Publish directory: public. No build command.
   If the site is in a GitHub repository linked to Netlify, pushing to the main branch publishes it.
   Otherwise drag the public folder onto the project's Deploys page in Netlify.
-  The live address is https://studs-sg.netlify.app until studs.sg starts working. Then follow
-  "Publishing" in AGENTS.md to switch the full addresses in the pages over to studs.sg.
+  The address is https://studs.sg (www.studs.sg and studs-sg.netlify.app reach the same site).
 
 EVERYDAY EDITS
   Season 2 total   In public/index.html find the comment SEASON 2 TOTAL. Change the figure and the
                    date. Change llms.txt to match.
   Copy             Plain text inside each <section> of index.html and about.html.
   Photos           Real photos only, never AI images. Nobody may be cropped out: each photo's frame
-                   has the same shape as the file. Sizes and steps are in AGENTS.md.
+                   has the same shape as the file. tools/photo.py prepares a new photo in all four
+                   sizes and formats and prints the markup; the steps are in AGENTS.md.
   Fundraiser link  Find and replace the GoFundMe address in index.html (links, the share box, the
                    studs-config block and the structured data), about.html and llms.txt.
   Sponsors         Footer of both pages; logos in public/images/sponsors/.

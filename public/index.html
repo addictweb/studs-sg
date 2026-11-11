@@ -21,14 +21,14 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0C1A33">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="canonical" href="https://studs-sg.netlify.app/">
+<link rel="canonical" href="https://studs.sg/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://studs-sg.netlify.app/">
+<meta property="og:url" content="https://studs.sg/">
 <meta property="og:site_name" content="STUDS.SG">
 <meta property="og:title" content="Ordinary men. Extraordinary challenges.">
 <meta property="og:description" content="A group of Singapore men racing for charity. Season 2 supports free children’s healthcare in Laos. Every penny helps.">
-<meta property="og:image" content="https://studs-sg.netlify.app/images/studs-share.jpg">
+<meta property="og:image" content="https://studs.sg/images/studs-share.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ordinary men. Extraordinary challenges.">
 <meta name="twitter:description" content="A group of Singapore men racing for charity. Season 2 supports free children’s healthcare in Laos. Every penny helps.">
-<meta name="twitter:image" content="https://studs-sg.netlify.app/images/studs-share.jpg">
+<meta name="twitter:image" content="https://studs.sg/images/studs-share.jpg">
 <meta name="twitter:image:alt" content="STUDS.SG: Ordinary men. Extraordinary challenges.">
 <meta name="apple-mobile-web-app-title" content="STUDS.SG">
 <meta name="application-name" content="STUDS.SG">
@@ -52,13 +52,13 @@
  "@graph": [
   {
    "@type": "SportsOrganization",
-   "@id": "https://studs-sg.netlify.app/#studs",
+   "@id": "https://studs.sg/#studs",
    "name": "STUDS",
    "alternateName": [
     "Support Through United Dad Strength",
     "STUDS.SG"
    ],
-   "url": "https://studs-sg.netlify.app/",
+   "url": "https://studs.sg/",
    "description": "A group of Singapore men who take on endurance races to raise money for charity. Season 1 raised US$114,454 for Caring for Cambodia. Season 2 supports Lao Friends Hospital for Children.",
    "sport": "Triathlon",
    "foundingDate": "2025",
@@ -66,7 +66,7 @@
     "@type": "Place",
     "name": "Singapore"
    },
-   "logo": "https://studs-sg.netlify.app/images/studs-logo.png",
+   "logo": "https://studs.sg/images/studs-logo.png",
    "sponsor": [
     {
      "@type": "Organization",
@@ -79,34 +79,34 @@
      "url": "https://www.tsunami-sport.com/"
     }
    ],
-   "image": "https://studs-sg.netlify.app/images/studs-share.jpg"
+   "image": "https://studs.sg/images/studs-share.jpg"
   },
   {
    "@type": "WebSite",
-   "@id": "https://studs-sg.netlify.app/#website",
-   "url": "https://studs-sg.netlify.app/",
+   "@id": "https://studs.sg/#website",
+   "url": "https://studs.sg/",
    "name": "STUDS.SG",
    "inLanguage": "en-GB",
    "publisher": {
-    "@id": "https://studs-sg.netlify.app/#studs"
+    "@id": "https://studs.sg/#studs"
    }
   },
   {
    "@type": "WebPage",
-   "@id": "https://studs-sg.netlify.app/#webpage",
-   "url": "https://studs-sg.netlify.app/",
+   "@id": "https://studs.sg/#webpage",
+   "url": "https://studs.sg/",
    "name": "STUDS Season 2 | Singapore men racing for charity",
    "description": "Singapore men racing IRONMAN 70.3 Western Australia on 6 December 2026 for Lao Friends Hospital for Children. Donate on GoFundMe or share the fundraiser.",
    "inLanguage": "en-GB",
    "isPartOf": {
-    "@id": "https://studs-sg.netlify.app/#website"
+    "@id": "https://studs.sg/#website"
    },
    "about": {
-    "@id": "https://studs-sg.netlify.app/#studs"
+    "@id": "https://studs.sg/#studs"
    },
    "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://studs-sg.netlify.app/images/studs-share.jpg",
+    "url": "https://studs.sg/images/studs-share.jpg",
     "width": 1200,
     "height": 630
    },
@@ -351,12 +351,15 @@ p { text-wrap: pretty; }
 
 /* The social side: a mosaic with no gaps, each frame the shape of its photo so nobody is cut off */
 .social { padding-block: 64px 0; }
+/* Phones: the cocktail and hawker photos share a row, their columns in proportion to their shapes so both
+   come out the same height and whole; the others run full width */
 .social-grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px;
-  grid-template-areas: "head head" "cocktail hawker" "cocktail pub" "dinner dinner" "splash splash";
+  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.3333fr); gap: 10px;
+  grid-template-areas: "head head" "cocktail hawker" "pub pub" "dinner dinner" "splash splash";
 }
 .social-row { display: contents; }
 .si-dinner, .si-splash, .si-hawker { aspect-ratio: 4 / 3; }
+.si-cocktail { aspect-ratio: 1050 / 1312; }
 .si-pub { aspect-ratio: 16 / 9; }
 .social-head { grid-area: head; margin-bottom: 20px; }
 .social-title, .race-title { font-weight: 900; text-transform: uppercase; font-size: clamp(2.6rem, 14.2vw, 9.5rem); line-height: .86; letter-spacing: -.01em; }
@@ -476,7 +479,7 @@ p { text-wrap: pretty; }
 @media (min-width: 960px) {
 }
 
-/* Social: the mosaic stays put; each photo opens as it arrives and its picture drifts inside the frame,
+/* Social: the mosaic stays put; each photo opens as it arrives and settles at full size,
    while the two headline words slide past each other */
 .motion .social, .motion .challenge { overflow-x: hidden; overflow-x: clip; }
 
@@ -558,19 +561,19 @@ html.lenis { scroll-behavior: auto; }
     <div class="wrap">
       <div class="wall">
         <div class="wall-col">
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 62%" src="images/training-dawn.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members riding away down an empty road at sunrise, with mist over the trees"></figure>
-          <figure class="wall-item plx portrait"><img style="object-position: 50% 50%" src="images/training-bikelift.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member lifting his road bike at the side of the road"></figure>
-          <figure class="wall-item plx wide"><img style="object-position: 50% 60%" src="images/training-night.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Cyclists with bike lights gathering in the dark before an early ride"></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-dawn-600.webp 600w, images/training-dawn.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 62%" src="images/training-dawn.jpg" srcset="images/training-dawn-600.jpg 600w, images/training-dawn.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members riding away down an empty road at sunrise, with mist over the trees"></picture></figure>
+          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/training-bikelift-600.webp 600w, images/training-bikelift.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 50%" src="images/training-bikelift.jpg" srcset="images/training-bikelift-600.jpg 600w, images/training-bikelift.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member lifting his road bike at the side of the road"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/training-night-600.webp 600w, images/training-night.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 60%" src="images/training-night.jpg" srcset="images/training-night-600.jpg 600w, images/training-night.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Cyclists with bike lights gathering in the dark before an early ride"></picture></figure>
         </div>
         <div class="wall-col">
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 58%" src="images/training-bikes.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Six STUDS members in the Season 2 kit standing with their road bikes on a quiet road before a ride"></figure>
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 30%" src="images/training-season2.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members in the Season 2 kit at sunrise"></figure>
-          <figure class="wall-item plx portrait"><img style="object-position: 50% 50%" src="images/training-selfie.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A selfie on a group ride, with riders in helmets lined up behind"></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-bikes-600.webp 600w, images/training-bikes.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 58%" src="images/training-bikes.jpg" srcset="images/training-bikes-600.jpg 600w, images/training-bikes.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="Six STUDS members in the Season 2 kit standing with their road bikes on a quiet road before a ride"></picture></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-season2-600.webp 600w, images/training-season2.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 30%" src="images/training-season2.jpg" srcset="images/training-season2-600.jpg 600w, images/training-season2.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="Three STUDS members in the Season 2 kit at sunrise"></picture></figure>
+          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/training-selfie-600.webp 600w, images/training-selfie.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 50%" src="images/training-selfie.jpg" srcset="images/training-selfie-600.jpg 600w, images/training-selfie.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="A selfie on a group ride, with riders in helmets lined up behind"></picture></figure>
         </div>
         <div class="wall-col">
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 62%" src="images/training-ride.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="A group of STUDS members with their bikes before a ride"></figure>
-          <figure class="wall-item plx wide"><img style="object-position: 50% 45%" src="images/training-sea.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member in the Season 2 kit stopping by the sea on a ride"></figure>
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 40%" src="images/training-pair.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="Two STUDS members in cycling kit taking a selfie at dawn"></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-ride-600.webp 600w, images/training-ride.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 62%" src="images/training-ride.jpg" srcset="images/training-ride-600.jpg 600w, images/training-ride.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="A group of STUDS members with their bikes before a ride"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/training-sea-600.webp 600w, images/training-sea.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 45%" src="images/training-sea.jpg" srcset="images/training-sea-600.jpg 600w, images/training-sea.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member in the Season 2 kit stopping by the sea on a ride"></picture></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-pair-600.webp 600w, images/training-pair.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 40%" src="images/training-pair.jpg" srcset="images/training-pair-600.jpg 600w, images/training-pair.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="Two STUDS members in cycling kit taking a selfie at dawn"></picture></figure>
         </div>
       </div>
     </div>
@@ -579,22 +582,22 @@ html.lenis { scroll-behavior: auto; }
       <div class="race-head">
         <h3 class="race-title"><span class="sl">Race</span> <span class="sl">days.</span></h3>
       </div>
-      <figure class="race-feature plx"><img src="images/race-family-1400.jpg" srcset="images/race-family-800.jpg 800w, images/race-family-1400.jpg 1400w" sizes="(min-width: 1440px) 1216px, 92vw" width="1400" height="788" loading="lazy" decoding="async" alt="The STUDS squad with their families at the Laguna Phuket Triathlon finish line"></figure>
+      <figure class="race-feature plx"><picture><source type="image/webp" srcset="images/race-family-800.webp 800w, images/race-family-1400.webp 1400w" sizes="(min-width: 1440px) 1216px, 92vw"><img src="images/race-family-1400.jpg" srcset="images/race-family-800.jpg 800w, images/race-family-1400.jpg 1400w" sizes="(min-width: 1440px) 1216px, 92vw" width="1400" height="788" loading="lazy" decoding="async" alt="The STUDS squad with their families at the Laguna Phuket Triathlon finish line"></picture></figure>
       <div class="wall">
         <div class="wall-col">
-          <figure class="wall-item plx upright"><img style="object-position: 50% 40%" src="images/race-finish.jpg" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running down the red carpet to the finish line at Laguna Phuket Triathlon"></figure>
-          <figure class="wall-item plx wide"><img style="object-position: 50% 62%" src="images/training-beach.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Eight STUDS members in race suits lined up on a beach"></figure>
-          <figure class="wall-item plx wide"><img style="object-position: 50% 50%" src="images/race-together.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members raising their arms as they cross the finish line together"></figure>
+          <figure class="wall-item plx upright"><picture><source type="image/webp" srcset="images/race-finish-600.webp 600w, images/race-finish.webp 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 40%" src="images/race-finish.jpg" srcset="images/race-finish-600.jpg 600w, images/race-finish.jpg 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running down the red carpet to the finish line at Laguna Phuket Triathlon"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/training-beach-600.webp 600w, images/training-beach.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 62%" src="images/training-beach.jpg" srcset="images/training-beach-600.jpg 600w, images/training-beach.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Eight STUDS members in race suits lined up on a beach"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-together-600.webp 600w, images/race-together.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 50%" src="images/race-together.jpg" srcset="images/race-together-600.jpg 600w, images/race-together.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members raising their arms as they cross the finish line together"></picture></figure>
         </div>
         <div class="wall-col">
-          <figure class="wall-item plx tall"><img style="object-position: 50% 28%" src="images/training-laguna.jpg" width="800" height="1386" loading="lazy" decoding="async" alt="A STUDS member roaring with both fists clenched as he runs at Laguna Phuket Triathlon"></figure>
-          <figure class="wall-item plx portrait"><img style="object-position: 50% 40%" src="images/race-caps.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="Two STUDS members in pink swim caps on the beach before the swim start"></figure>
-          <figure class="wall-item plx wide"><img style="object-position: 50% 50%" src="images/race-fistbump.jpg" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members bumping fists on race day"></figure>
+          <figure class="wall-item plx tall"><picture><source type="image/webp" srcset="images/training-laguna-600.webp 600w, images/training-laguna.webp 800w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 28%" src="images/training-laguna.jpg" srcset="images/training-laguna-600.jpg 600w, images/training-laguna.jpg 800w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="800" height="1386" loading="lazy" decoding="async" alt="A STUDS member roaring with both fists clenched as he runs at Laguna Phuket Triathlon"></picture></figure>
+          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/race-caps-600.webp 600w, images/race-caps.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 40%" src="images/race-caps.jpg" srcset="images/race-caps-600.jpg 600w, images/race-caps.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="Two STUDS members in pink swim caps on the beach before the swim start"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-fistbump-600.webp 600w, images/race-fistbump.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 50%" src="images/race-fistbump.jpg" srcset="images/race-fistbump-600.jpg 600w, images/race-fistbump.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members bumping fists on race day"></picture></figure>
         </div>
         <div class="wall-col">
-          <figure class="wall-item plx portrait"><img style="object-position: 55% 50%" src="images/training-flyer.jpg" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member cycling past the Singapore Flyer"></figure>
-          <figure class="wall-item plx landscape"><img style="object-position: 50% 55%" src="images/training-banner.jpg" width="1000" height="750" loading="lazy" decoding="async" alt="The STUDS squad on a beach with their cartoon team banner"></figure>
-          <figure class="wall-item plx upright"><img style="object-position: 50% 40%" src="images/race-arch.jpg" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running towards the Laguna Phuket Triathlon finish arch"></figure>
+          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/training-flyer-600.webp 600w, images/training-flyer.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 55% 50%" src="images/training-flyer.jpg" srcset="images/training-flyer-600.jpg 600w, images/training-flyer.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member cycling past the Singapore Flyer"></picture></figure>
+          <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-banner-600.webp 600w, images/training-banner.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 55%" src="images/training-banner.jpg" srcset="images/training-banner-600.jpg 600w, images/training-banner.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="The STUDS squad on a beach with their cartoon team banner"></picture></figure>
+          <figure class="wall-item plx upright"><picture><source type="image/webp" srcset="images/race-arch-600.webp 600w, images/race-arch.webp 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 40%" src="images/race-arch.jpg" srcset="images/race-arch-600.jpg 600w, images/race-arch.jpg 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running towards the Laguna Phuket Triathlon finish arch"></picture></figure>
         </div>
       </div>
     </div>
@@ -616,10 +619,10 @@ html.lenis { scroll-behavior: auto; }
         </div>
       </div>
       <figure class="cause-photo plx">
-        <img src="images/lfhc-neonatal-800.jpg"
+        <picture><source type="image/webp" srcset="images/lfhc-neonatal-800.webp 800w, images/lfhc-neonatal-1400.webp 1400w" sizes="(min-width: 960px) 45vw, 100vw"><img src="images/lfhc-neonatal-800.jpg"
              srcset="images/lfhc-neonatal-800.jpg 800w, images/lfhc-neonatal-1400.jpg 1400w"
              sizes="(min-width: 960px) 45vw, 100vw" width="1400" height="1050" loading="lazy" decoding="async"
-             alt="Three nurses at Lao Friends Hospital for Children caring for a newborn baby in a cot">
+             alt="Three nurses at Lao Friends Hospital for Children caring for a newborn baby in a cot"></picture>
       </figure>
     </div>
   </section>
@@ -631,13 +634,13 @@ html.lenis { scroll-behavior: auto; }
         <p class="social-lede">Outrun the drinkers, outdrink the runners. And look after each other’s physical and mental wellbeing.</p>
       </div>
       <div class="social-row">
-        <figure class="social-item si-dinner" style="--a: 1.3333"><img style="object-position: 50% 58%" src="images/social-dinner-1400.jpg" srcset="images/social-dinner-868.jpg 868w, images/social-dinner-1400.jpg 1400w" sizes="(min-width: 960px) 50vw, 90vw" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members in team shirts at a long dinner table under a pergola at night, raising their glasses"></figure>
-        <figure class="social-item si-cocktail" style="--a: 0.8003"><img style="object-position: 46% 38%" src="images/social-cocktail-1050.jpg" srcset="images/social-cocktail-651.jpg 651w, images/social-cocktail-1050.jpg 1050w" sizes="(min-width: 960px) 30vw, 64vw" width="1050" height="1312" loading="lazy" decoding="async" alt="A STUDS member drinking from a giant cocktail glass and holding up a STUDS cap"></figure>
-        <figure class="social-item si-hawker" style="--a: 1.3333"><img style="object-position: 54% 58%" src="images/social-hawker-1400.jpg" srcset="images/social-hawker-868.jpg 868w, images/social-hawker-1400.jpg 1400w" sizes="(min-width: 960px) 46vw, 84vw" width="1400" height="1050" loading="lazy" decoding="async" alt="Three STUDS members in caps raising mugs of beer at a hawker centre"></figure>
+        <figure class="social-item si-dinner" style="--a: 1.3333"><picture><source type="image/webp" srcset="images/social-dinner-868.webp 868w, images/social-dinner-1400.webp 1400w" sizes="(min-width: 960px) 31vw, calc(100vw - 40px)"><img style="object-position: 50% 58%" src="images/social-dinner-1400.jpg" srcset="images/social-dinner-868.jpg 868w, images/social-dinner-1400.jpg 1400w" sizes="(min-width: 960px) 31vw, calc(100vw - 40px)" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members in team shirts at a long dinner table under a pergola at night, raising their glasses"></picture></figure>
+        <figure class="social-item si-cocktail" style="--a: 0.8003"><picture><source type="image/webp" srcset="images/social-cocktail-651.webp 651w, images/social-cocktail-1050.webp 1050w" sizes="(min-width: 960px) 19vw, calc(37vw - 20px)"><img style="object-position: 46% 38%" src="images/social-cocktail-1050.jpg" srcset="images/social-cocktail-651.jpg 651w, images/social-cocktail-1050.jpg 1050w" sizes="(min-width: 960px) 19vw, calc(37vw - 20px)" width="1050" height="1312" loading="lazy" decoding="async" alt="A STUDS member drinking from a giant cocktail glass and holding up a STUDS cap"></picture></figure>
+        <figure class="social-item si-hawker" style="--a: 1.3333"><picture><source type="image/webp" srcset="images/social-hawker-868.webp 868w, images/social-hawker-1400.webp 1400w" sizes="(min-width: 960px) 31vw, calc(62vw - 30px)"><img style="object-position: 54% 58%" src="images/social-hawker-1400.jpg" srcset="images/social-hawker-868.jpg 868w, images/social-hawker-1400.jpg 1400w" sizes="(min-width: 960px) 31vw, calc(62vw - 30px)" width="1400" height="1050" loading="lazy" decoding="async" alt="Three STUDS members in caps raising mugs of beer at a hawker centre"></picture></figure>
       </div>
       <div class="social-row">
-        <figure class="social-item si-splash" style="--a: 1.3333"><img style="object-position: 50% 64%" src="images/social-splash-1400.jpg" srcset="images/social-splash-868.jpg 868w, images/social-splash-1400.jpg 1400w" sizes="(min-width: 960px) 44vw, 80vw" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members and friends with drinks outside Splash! Bar"></figure>
-        <figure class="social-item si-pub" style="--a: 1.7766"><img style="object-position: 42% 70%" src="images/social-pub-1400.jpg" srcset="images/social-pub-868.jpg 868w, images/social-pub-1400.jpg 1400w" sizes="(min-width: 960px) 56vw, 96vw" width="1400" height="788" loading="lazy" decoding="async" alt="STUDS members in team shirts round a pub table with drinks"></figure>
+        <figure class="social-item si-splash" style="--a: 1.3333"><picture><source type="image/webp" srcset="images/social-splash-868.webp 868w, images/social-splash-1400.webp 1400w" sizes="(min-width: 960px) 36vw, calc(100vw - 40px)"><img style="object-position: 50% 64%" src="images/social-splash-1400.jpg" srcset="images/social-splash-868.jpg 868w, images/social-splash-1400.jpg 1400w" sizes="(min-width: 960px) 36vw, calc(100vw - 40px)" width="1400" height="1050" loading="lazy" decoding="async" alt="STUDS members and friends with drinks outside Splash! Bar"></picture></figure>
+        <figure class="social-item si-pub" style="--a: 1.7766"><picture><source type="image/webp" srcset="images/social-pub-868.webp 868w, images/social-pub-1400.webp 1400w" sizes="(min-width: 960px) 47vw, calc(100vw - 40px)"><img style="object-position: 42% 70%" src="images/social-pub-1400.jpg" srcset="images/social-pub-868.jpg 868w, images/social-pub-1400.jpg 1400w" sizes="(min-width: 960px) 47vw, calc(100vw - 40px)" width="1400" height="788" loading="lazy" decoding="async" alt="STUDS members in team shirts round a pub table with drinks"></picture></figure>
       </div>
     </div>
   </section>
@@ -903,7 +906,7 @@ html.lenis { scroll-behavior: auto; }
       w.cols.forEach(function (col, i) {
         if (col.offsetParent === null || !col.children.length) return;
         W.cols.push({ el: col, speed: COL_SPEED[i], top: col.offsetTop, items: Array.prototype.map.call(col.children, function (item) {
-          return { el: item, img: item.firstElementChild, top: item.offsetTop, h: item.offsetHeight };
+          return { el: item, img: item.querySelector("img"), top: item.offsetTop, h: item.offsetHeight };
         }) });
       });
       return W;
@@ -1186,7 +1189,7 @@ html.lenis { scroll-behavior: auto; }
      and fade back if you scroll up past them. Nothing moves, so this runs for reduced motion too.
      Without JavaScript every photo is simply in colour. */
   var tinted = $$(".cause-photo img, .wall-item img, .social-item img, .race-feature img").map(function (img) {
-    return { img: img, frame: img.parentElement, col: img.closest(".wall-col"), top: 0, g: -1 };
+    return { img: img, frame: img.closest(".cause-photo, .wall-item, .social-item, .race-feature"), col: img.closest(".wall-col"), top: 0, g: -1 };
   });
   function measureTint() { tinted.forEach(function (t) { t.col = t.img.closest(".wall-col"); t.top = docTop(t.frame); }); }
   function paintTint(s, force) {
@@ -1214,6 +1217,25 @@ html.lenis { scroll-behavior: auto; }
   window.addEventListener("scroll", requestFrame, { passive: true });
   window.addEventListener("resize", onResize);
   window.addEventListener("load", remeasure);
+  /* Once the page has loaded, fetch the remaining photos quietly, top to bottom and three at a time, so they are
+     ready before visitors scroll to them. Skipped when the visitor has asked to save data or is on a 2G connection. */
+  window.addEventListener("load", function () {
+    var net = navigator.connection;
+    if (net && (net.saveData || /2g/.test(net.effectiveType || ""))) return;
+    var queue = $$("img[loading=lazy]"), busy = 0;
+    function done() { busy--; next(); }
+    function next() {
+      while (busy < 3 && queue.length) {
+        var img = queue.shift();
+        if (img.complete) continue;   // already loaded (or failed): nothing to wait for
+        busy++;
+        img.addEventListener("load", done, { once: true });
+        img.addEventListener("error", done, { once: true });
+        img.loading = "eager";
+      }
+    }
+    setTimeout(next, 600);
+  });
   listen(reduce, setMode);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
 })();
