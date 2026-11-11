@@ -109,7 +109,9 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - Netlify project: "studs-sg", site ID `c904b41a-d842-4734-82aa-f3e8372f083f`. Publish directory: `public`. No build command.
 - The address is https://studs.sg (www.studs.sg and studs-sg.netlify.app reach the same site). Netlify provides the security certificate and sends http visitors to https. Links that must be full addresses (canonical, link previews, structured data, sitemap.xml, robots.txt and llms.txt) use `https://studs.sg/`.
 - Don't make studscharity.com or studsfoundation.com the main address while the charity registration is pending.
-- To publish: if the site is in a GitHub repository linked to the Netlify project, push to the main branch. Otherwise drag the public folder onto the project's Deploys page in Netlify, or use the Netlify CLI: `netlify deploy --prod --dir public --site c904b41a-d842-4734-82aa-f3e8372f083f`.
+- The code is at https://github.com/addictweb/studs-sg. The Netlify project publishes its main branch, so a push to main changes the live site: ask the owner before pushing. Work on another branch if a change isn't ready.
+- Other people can edit by being added as collaborators on the GitHub repository; they never need the owner's Netlify login. On Netlify's free plan this only works while the repository stays public.
+- Without GitHub: drag the public folder onto the project's Deploys page in Netlify, or use the Netlify CLI: `netlify deploy --prod --dir public --site c904b41a-d842-4734-82aa-f3e8372f083f`.
 - Afterwards, open the live site on a phone and a desktop and check that it loads and moves as you scroll.
 
 ## Decisions already made (don't undo them without asking)

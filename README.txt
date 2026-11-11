@@ -19,8 +19,9 @@ WHAT'S HERE
 
 PUBLISH
   Netlify project "studs-sg". Publish directory: public. No build command.
-  If the site is in a GitHub repository linked to Netlify, pushing to the main branch publishes it.
-  Otherwise drag the public folder onto the project's Deploys page in Netlify.
+  The code is at github.com/addictweb/studs-sg. Netlify publishes its main branch, so pushing to
+  main changes the live site. To let someone else edit, add them as a collaborator on GitHub.
+  Without GitHub, drag the public folder onto the project's Deploys page in Netlify.
   The address is https://studs.sg (www.studs.sg and studs-sg.netlify.app reach the same site).
 
 EVERYDAY EDITS
