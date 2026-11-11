@@ -13,6 +13,7 @@ STUDS (Support Through United Dad Strength) is a group of Singapore men who race
 - Never describe STUDS as a charity or a foundation: registration is in progress. Donations go to Friends Without A Border through GoFundMe.
 - Never name a donor or say who gave what unless the owner confirms it.
 - Every Donate and Share link uses exactly https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more
+- Season numbers ("Season 1", "Season 2") appear only beside the money raised, in the totals section. Visitors don't care about them, so keep them out of page titles, headlines, copy, photo descriptions and share text.
 - Photos: real photos only. Never use AI-generated or AI-edited images (one was removed for being AI). People must be whole and central: never crop anyone out of a photo. Show children only in group shots the owner has chosen (the Phuket family finish photo).
 - Try not to show the same person prominently in more than one photo. Group shots are fine.
 - Design: navy `#0C1A33`, off-white `#F3F5F6` and green `#7DC242` as the accent, with mist `#A9B4C6` and slate `#4A5568` for quieter text. One typeface, Archivo, self-hosted. Strict grid, very large headlines, plenty of space. No drop shadows or frames on photos, no gradients, no stock images.
@@ -122,4 +123,5 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - Photo frames match the photos' shapes, and the drift inside frames that cut off people at the edges was removed.
 - Big type is capped at the 1440px layout width.
 - The hospital section comes after the STUDS section and before Recovery drinks.
+- "Season 2" was taken out of the page title, the hero, the Busselton line, the photo descriptions and the About page. Season numbers now appear only on the totals.
 - Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.
