@@ -123,5 +123,6 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - Photo frames match the photos' shapes, and the drift inside frames that cut off people at the edges was removed.
 - Big type is capped at the 1440px layout width.
 - The hospital section comes after the STUDS section and before Recovery drinks.
+- The browser tab title is "STUDS | Ordinary men, extraordinary challenges" (the About page: "About STUDS | Ordinary men, extraordinary challenges").
 - "Season 2" was taken out of the page title, the hero, the Busselton line, the photo descriptions and the About page. Season numbers now appear only on the totals.
 - Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.
