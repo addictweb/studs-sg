@@ -43,7 +43,7 @@ public/                everything the site serves
 ## Facts on the pages (change them everywhere at once)
 
 - Season 1: US$114,454 raised for Caring for Cambodia.
-- Season 2: raising money for Lao Friends Hospital for Children, run by Friends Without A Border. It ends at IRONMAN 70.3 Western Australia in Busselton on 6 December 2026. The total shown is US$115,000, as at 9 November 2026.
+- Season 2: raising money for Lao Friends Hospital for Children, run by Friends Without A Border. It ends at IRONMAN 70.3 Western Australia in Busselton on 6 December 2026. The total shown is US$121,077, as at 13 November 2026.
 - Facts appear in four places: the visible copy in index.html and about.html, the structured data (JSON-LD) in the head of index.html, llms.txt, and the share text in the `studs-config` block near the bottom of index.html.
 
 ## Common jobs
@@ -126,3 +126,4 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - The browser tab title is "STUDS | Ordinary men, extraordinary challenges" (the About page: "About STUDS | Ordinary men, extraordinary challenges").
 - "Season 2" was taken out of the page title, the hero, the Busselton line, the photo descriptions and the About page. Season numbers now appear only on the totals.
 - Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.
+- The child mortality figure is Friends Without A Border's: 1 in 25 children in rural Laos die before turning five. It replaced UNICEF's 1 in 34, so the site agrees with the hospital's own site and the GoFundMe page.
