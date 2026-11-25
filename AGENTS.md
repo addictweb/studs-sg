@@ -17,7 +17,7 @@ STUDS (Support Through United Dad Strength) is a group of Singapore men who race
 - Photos: real photos only. Never use AI-generated or AI-edited images (one was removed for being AI). People must be whole and central: never crop anyone out of a photo. Show children only in group shots the owner has chosen (the Phuket family finish photo).
 - Try not to show the same person prominently in more than one photo. Group shots are fine.
 - Design: navy `#0C1A33`, off-white `#F3F5F6` and green `#7DC242` as the accent, with mist `#A9B4C6` and slate `#4A5568` for quieter text. One typeface, Archivo, self-hosted. Strict grid, very large headlines, plenty of space. No drop shadows or frames on photos, no gradients, no stock images.
-- Sponsors in the footer: only Boomarang Bistro & Bar and Tsunami, as white logos. Don't add or remove sponsors without the owner.
+- Sponsors in the footer: only Boomarang Bistro & Bar, Cupcke and Tsunami, as white logos. Don't add or remove sponsors without the owner.
 - Ask before adding anything that shows the owner's WhatsApp number. The "Join us" buttons were removed to keep it from being spammed. Only the About page's sponsorship button uses it now.
 - Ask the owner before publishing. The live site is shared publicly.
 
@@ -75,7 +75,7 @@ Edit the text inside the right section of index.html or about.html. Keep headlin
 
 ### Change the sponsors
 
-The sponsors are in the footer of both pages (`<ul class="sponsors">`). Logos are white PNGs with a transparent background in public/images/sponsors/. Each has a width class (`.logo-boomarang`, `.logo-tsunami`) in the CSS of both pages, set by eye so the logos look the same size. Also update the sponsor list in the JSON-LD of index.html and in llms.txt.
+The sponsors are in the footer of both pages (`<ul class="sponsors">`). Logos are white PNGs with a transparent background in public/images/sponsors/. Each has a width class (`.logo-boomarang`, `.logo-cupcke`, `.logo-tsunami`) in the CSS of both pages, set by eye so the logos look the same size. Also update the sponsor list in the JSON-LD of index.html and in llms.txt.
 
 ### Edit a script
 
@@ -118,7 +118,7 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 ## Decisions already made (don't undo them without asking)
 
 - The "Join us" WhatsApp buttons were removed.
-- Sponsors were cut to Boomarang and Tsunami. Cupcke and XXL Design & Construct were removed.
+- Sponsors were cut to Boomarang and Tsunami, and XXL Design & Construct was removed. The owner added Cupcke back on 25 November 2026.
 - A beach sunrise photo turned out to be AI-generated and was removed.
 - Photo frames match the photos' shapes, and the drift inside frames that cut off people at the edges was removed.
 - Big type is capped at the 1440px layout width.
