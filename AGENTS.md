@@ -16,7 +16,7 @@ STUDS (Support Through United Dad Strength) is a group of Singapore men who race
 - Season numbers ("Season 1", "Season 2") appear only beside the money raised, in the totals section. Visitors don't care about them, so keep them out of page titles, headlines, copy, photo descriptions and share text.
 - Photos: real photos only. Never use AI-generated or AI-edited images (one was removed for being AI). People must be whole and central: never crop anyone out of a photo. Show children only in group shots the owner has chosen (the Phuket family finish photo).
 - Try not to show the same person prominently in more than one photo. Group shots are fine.
-- Design: navy `#0C1A33`, off-white `#F3F5F6` and green `#7DC242` as the accent, with mist `#A9B4C6` and slate `#4A5568` for quieter text. One typeface, Archivo, self-hosted. Strict grid, very large headlines, plenty of space. No drop shadows or frames on photos, no gradients, no stock images.
+- Design: navy `#0C1A33`, off-white `#F3F5F6` and green `#7DC242` as the accent, with mist `#A9B4C6` and slate `#4A5568` for quieter text. One typeface, Archivo, self-hosted. Strict grid, very large headlines, plenty of space. No drop shadows or frames on photos, no gradients, no stock images. The one gradient allowed is the fade under the top photo on phones, which the owner chose.
 - Sponsors in the footer: only Boomarang Bistro & Bar, Cupcke and Tsunami, as white logos. Don't add or remove sponsors without the owner.
 - Ask before adding anything that shows the owner's WhatsApp number. The "Join us" buttons were removed to keep it from being spammed. Only the About page's sponsorship button uses it now.
 - Ask the owner before publishing. The live site is shared publicly.
@@ -74,7 +74,15 @@ None of these is a script, so no hash refresh is needed.
 
 ### Change the top photo or the link preview
 
-The top photo is `hero-phuket-800` and `hero-phuket-1400`, each as JPEG and WebP, cut to 16:9. On phones, and when it opens to the full screen, only the middle of the photo shows, so pick one where the people in the middle carry it. The link preview is made from the same photo:
+The top photo is `hero-phuket-800` and `hero-phuket-1400`, each as JPEG and WebP, cut to 16:9. A phone held upright shows all of it, with its foot fading into the page under the headline, so a new photo needs:
+
+- faces and bodies in the upper half. The fade darkens the lower half, and the headline covers the bottom eighth.
+- heads no higher than a third of the way down. Short phones trim the sky to make room.
+- the people in the middle carrying it. When it opens to the full screen, phones show only the middle.
+
+If a new photo sits differently, change the numbers that describe it: `--fit`, the fade's height and the headline's overlap in the hero CSS of index.html (the comment above them explains each), and the matching limits in `HERO_CHECK` and `TEXT_CHECK` in tools/check_layout.py.
+
+The link preview is made from the same photo:
 
 ```
 python3 tools/share_image.py hero-phuket-1400.jpg <new-name> "<caption line 1>" "<caption line 2>"
@@ -118,6 +126,7 @@ Otherwise browsers block the script on the live site, and the page loses its mot
 Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym, the training wall, then "Race days." with the family photo and the race wall), the cause (the hospital), "Recovery drinks.", the season totals, "Every penny helps." (donate and share), and the footer.
 
 - Motion: every movement follows the scroll position and runs in one animation loop (the "Motion" part of the second script). Visitors who ask their device for reduced motion get the same page without movement. With JavaScript off, they get a plain layout. The page's background colour fades from one section to the next.
+- The top of the page on phones: a phone held upright shows the whole top photo. Its lower half fades into the navy page and the headline sits over the fade, so there is no hard edge under the picture. The CSS works everything out from the size of the screen (`--fit` and `--slot`, explained in the comment above those rules). The script only keeps the fade on the photo's lower edge while the photo opens out, and thins it away so the full-screen photo is clear. Short or sideways screens keep the plain layout: no fade, and the headline under a cropped photo. Desktop has the photo beside the headline, with no fade.
 - Big type on wide screens: the layout stops getting wider at 1440px. Big type on desktop uses `calc(var(--vu) * N)`, where `--vu` is 1vw capped at 14.4px, so it stops growing at the same point. Never size big text in plain `vw`: on wide monitors it outgrows its column and runs into the next block. That bug has happened once already.
 - Photo walls (`.wall`): three `.wall-col` columns of `figure.wall-item`. The shape class on each figure sets the shape of its frame. On phones the script moves the third column's photos into the two columns shown (`arrangeWalls`). With motion on, the columns drift at different speeds and each photo opens from a slit.
 - Recovery drinks: two `.social-row` groups. Each figure carries `style="--a: …"` with its photo's width divided by its height, so every desktop row fills the width with each photo whole. On phones the rows turn into a two-column mosaic.
@@ -156,4 +165,6 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - The owner chose two photos from Laguna Phuket 2026: the line-up on the beach, now the top photo and the link preview, and the squad wading into the surf (`race-surf`), which stays on the race wall.
 - The About page says "not all of us are men": a woman raced in STUDS kit at Phuket in 2026. Everywhere else the group is still described as men.
 - The link preview's caption names no upcoming race, so it does not go out of date.
+- On phones the foot of the top photo fades into the page, with the headline over it. The owner wanted the hard edge under the photo gone and chose the fade on 25 November 2026, over a version with the headline cut into the photo in two hard-edged colours. He knew it is a gradient and that it darkens people's legs. Keep it to this one place. Cutting the men out to stand in front of the letters was turned down, because it would mean editing the photo with an AI tool.
+- A phone held upright never crops the top photo at the sides. Before, tall phones cut off the people at each end, and small phones cut off heads and feet.
 - The child mortality figure is Friends Without A Border's: 1 in 25 children in rural Laos die before turning five. It replaced UNICEF's 1 in 34, so the site agrees with the hospital's own site and the GoFundMe page.

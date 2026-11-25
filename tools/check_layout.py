@@ -6,6 +6,7 @@ with and without motion, then reports anything that looks broken:
   - text running into other text, or over a photo, button or field
   - text cut off at the edge of the screen
   - photos that fail to load, or that are cropped (people should always be whole)
+  - on phones held upright: the top photo cut off at the sides or the foot, or the headline climbing too far into it
   - the Donate button not visible on the first screen
   - script errors
 
@@ -18,7 +19,7 @@ import asyncio, functools, http.server, pathlib, socketserver, sys, threading
 from playwright.async_api import async_playwright
 
 PUBLIC = pathlib.Path(__file__).resolve().parent.parent / "public"
-PHONES = [(320, 568), (375, 667), (390, 844), (430, 932)]
+PHONES = [(320, 568), (375, 553), (375, 667), (390, 844), (402, 683), (430, 932)]   # 375x553 and 402x683: Safari with its bars showing
 DESKTOPS = [(1024, 768), (1280, 720), (1366, 768), (1440, 900), (1920, 1080), (2560, 1440), (3440, 1440)]
 
 TEXT_CHECK = r"""() => {
@@ -53,7 +54,9 @@ TEXT_CHECK = r"""() => {
     for (const p of texts) {
       if (b.contains(p.el) || p.el.contains(b)) continue;
       const w = Math.min(p.r, br.right) - Math.max(p.x, br.left), h = Math.min(p.b, br.bottom) - Math.max(p.y, br.top);
-      if (w > 1 && h > 0.3 * (p.b - p.y)) found.add('text over ' + b.tagName.toLowerCase() + ': ' + name(p.el));
+      // on phones the big headline sits over the fade at the foot of the top photo on purpose; any deeper and it would cover legs
+      const lap = p.el.classList.contains('ht-big') && b.closest('.hero-photo');
+      if (w > 1 && h > (lap ? 0.7 * parseFloat(getComputedStyle(p.el).fontSize) : 0.3 * (p.b - p.y))) found.add('text over ' + b.tagName.toLowerCase() + ': ' + name(p.el));
     }
   }
   return [...found];
@@ -69,6 +72,25 @@ PHOTO_CHECK = r"""() => {
     const vx = Math.min(frame.width, img.naturalWidth * s) / (img.naturalWidth * s), vy = Math.min(frame.height, img.naturalHeight * s) / (img.naturalHeight * s);
     if (vx < 0.9 || vy < 0.9) out.push(`photo cropped: ${img.src.split('/').pop()} shows ${Math.round(vx * 100)}% of its width and ${Math.round(vy * 100)}% of its height`);
   }
+  return out;
+}"""
+# Phones held upright, before any scrolling: where the headline sits over the foot of the top photo, the photo must
+# show its full width and its foot, and may lose only sky from the top.
+HERO_CHECK = r"""() => {
+  const slot = document.querySelector('.hero-slot'), img = document.querySelector('.hero-photo img'), big = document.querySelector('.ht-big');
+  if (!slot || !img || !big || !img.naturalWidth || innerWidth >= 960) return [];
+  const s = slot.getBoundingClientRect(), i = img.getBoundingClientRect(), cs = getComputedStyle(img);
+  if (s.bottom - big.getBoundingClientRect().top < 1) return [];   // short or sideways screen: plain layout, headline under the photo
+  let w = i.width, h = i.height, x = i.left - s.left, y = i.top - s.top;   // where the picture itself is drawn, relative to its frame
+  if (cs.objectFit === 'cover') {
+    const k = Math.max(s.width / img.naturalWidth, s.height / img.naturalHeight), py = cs.objectPosition.split(' ')[1] || '50%';
+    w = img.naturalWidth * k; h = img.naturalHeight * k; x = (s.width - w) / 2;
+    y = py.endsWith('%') ? (s.height - h) * parseFloat(py) / 100 : parseFloat(py);
+  }
+  const out = [];
+  if (w > s.width + 1.5) out.push(`top photo cut off at the sides: shows ${Math.round(s.width / w * 100)}% of its width`);
+  if (y + h > s.height + 1.5) out.push('top photo cut off at the foot');
+  if (-y / h > 0.315) out.push(`top photo cut off at the top: ${Math.round(-y / h * 100)}% gone, heads start at 33%`);
   return out;
 }"""
 FIRST_SCREEN = """() => { const a = document.querySelectorAll('.hero-actions .btn'); if (!a.length) return true;
@@ -90,6 +112,7 @@ async def check(browser, base, page_name, w, h, phone, motion):
     pg.on("pageerror", lambda e: errors.append("script error: " + str(e)[:120]))
     await pg.goto(base + page_name, wait_until="networkidle"); await pg.evaluate("document.fonts.ready"); await pg.wait_for_timeout(250)
     issues = [] if await pg.evaluate(FIRST_SCREEN) else ["Donate button below the first screen"]
+    if page_name == "index.html" and phone: issues += await pg.evaluate(HERO_CHECK)
     height = await pg.evaluate("document.documentElement.scrollHeight"); sideways = 0
     for y in range(0, height + h, max(300, h // 2)):
         await pg.evaluate(f"scrollTo(0, {y})"); await pg.wait_for_timeout(60 if motion else 30)

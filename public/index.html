@@ -270,6 +270,35 @@ p { text-wrap: pretty; }
 .ht-big, .ht-sub { display: block; }
 .hero-lede { margin-top: 14px; color: var(--mist); max-width: 32em; }
 .hero-actions { display: grid; gap: 10px; margin-top: 20px; }
+/* Phones: the foot of the photo fades into the navy page and the headline sits over the fade, so there is no hard
+   edge under the picture. The owner chose this fade (25 November 2026): it is the one gradient on the site.
+   --fit   1px when the screen is tall enough to show everyone from head to toe, otherwise 0. The photo then keeps
+           its foot and loses at most 31% of its height from the sky. It is worked out from the small viewport
+           height, which stays the same when the phone's address bar slides away. Short and sideways screens get 0
+           and keep the plain layout: photo cropped around the middle, no fade, headline underneath.
+   --slot  the photo's height: the room left on the first screen, but never taller than the whole photo, so nobody
+           is cut off at the sides.
+   The fade covers the lower half of the photo. The headline climbs .51em into it, which puts the top of the
+   capitals just under the feet. The script moves the fade with the photo's lower edge while the photo opens out
+   (--fade-b) and thins it away (--fade-o), so the full-screen photo is clear. */
+@supports (height: min(1svh, 1px)) {
+  @media (max-width: 959px) {
+    .hero {
+      --fit: clamp(0px, calc((100svh - 48.5vw - 357.5px) * 9999), 1px);
+      --slot: min(max(96px, calc(80svh - 330px + var(--fit) * 44)), 56.25vw);
+    }
+    .hero-slot { height: var(--slot); }
+    .hero-photo img { object-position: 50% max(calc(var(--slot) - 56.25vw), calc((var(--slot) - 56.25vw) * .64 - var(--fit) * 9999)); }
+    .hero-photo::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: calc(var(--fade-b, 0px) - 1px);
+      height: min(calc(var(--slot) * .5 + 1px), calc(var(--fit) * 9999));
+      background: linear-gradient(to bottom, rgba(12, 26, 51, 0), rgba(12, 26, 51, .6) 50%, var(--navy));
+      opacity: var(--fade-o, 1); pointer-events: none;
+    }
+    .hero-copy { position: relative; z-index: 2; padding-top: calc(18px - var(--fit) * 18); }
+    .ht-big { margin-top: calc(min(.51em, calc(var(--fit) * 99)) * -1); }
+  }
+}
 @media (min-width: 960px) {
   .hero-pin { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; min-height: 100svh; }
   .hero-inner {
@@ -482,7 +511,7 @@ p { text-wrap: pretty; }
 .motion .hero { height: calc(100vh + var(--hero-travel)); height: calc(100lvh + var(--hero-travel)); }
 .motion .hero-pin { position: sticky; top: 0; height: 100vh; height: 100lvh; overflow: hidden; }
 .motion .hero-slot { position: static; }
-.motion .hero-photo img { object-fit: fill; transform-origin: 0 0; }
+.motion .hero-photo img { object-fit: fill; object-position: 0 0; transform-origin: 0 0; }
 .motion .hero-copy { position: relative; z-index: 2; }
 .motion .hero-wash { display: block; position: absolute; z-index: 3; inset: 0; background: var(--navy); opacity: 0; pointer-events: none; }
 .motion .challenge { position: relative; z-index: 2; margin-top: calc(var(--hero-travel) * -.42); }
@@ -909,8 +938,12 @@ html.lenis { scroll-behavior: auto; }
     /* The photo keeps the size it has in its frame; scaling up for the full screen is a transform,
        so the browser still sees the same photo at the same size */
     var H0 = g.hero;
+    /* Phones: where the headline climbs into the photo, the photo's foot fades to navy under it (see the hero CSS)
+       and the photo is held by its foot rather than its middle */
+    H0.fade = vw < 960 && H0.sy + H0.sh - (heroBig.getBoundingClientRect().top - pinR.top) > 1;
+    H0.ay = H0.fade ? 1 : 0.64;
     H0.s0 = Math.max(H0.sw / IW, H0.sh / IH);
-    H0.x0 = H0.sx + (H0.sw - IW * H0.s0) * 0.5; H0.y0 = H0.sy + (H0.sh - IH * H0.s0) * 0.64;
+    H0.x0 = H0.sx + (H0.sw - IW * H0.s0) * 0.5; H0.y0 = H0.sy + (H0.sh - IH * H0.s0) * H0.ay;
     heroImg.style.width = (IW * H0.s0).toFixed(2) + "px"; heroImg.style.height = (IH * H0.s0).toFixed(2) + "px";
     heroImg.style.left = H0.x0.toFixed(2) + "px"; heroImg.style.top = H0.y0.toFixed(2) + "px";
     g.cause = { title: docTop(causeTitle), lede: docTop(causeLede), facts: facts.map(docTop), frame: docTop(causeFrame), frameH: causeFrame.offsetHeight };
@@ -991,8 +1024,14 @@ html.lenis { scroll-behavior: auto; }
       var rx = H.sx * (1 - e), ry = H.sy * (1 - e), rw = lerp(H.sw, H.W, e), rh = lerp(H.sh, H.H, e);
       put(heroPhoto, "clipPath", "inset(" + ry.toFixed(1) + "px " + (H.W - rx - rw).toFixed(1) + "px " + (H.H - ry - rh).toFixed(1) + "px " + rx.toFixed(1) + "px)");
       var S = Math.max(rw / IW, rh / IH) * (1 + 0.08 * easeOut(clamp01((p - 0.2) / 0.55)));
-      var ix = rx + (rw - IW * S) * 0.5, iy = ry + (rh - IH * S) * (0.64 - 0.06 * e);
+      var ix = rx + (rw - IW * S) * 0.5, iy = ry + (rh - IH * S) * lerp(H.ay, 0.58, e);
       put(heroImg, "transform", "translate(" + (ix - H.x0).toFixed(2) + "px," + (iy - H.y0).toFixed(2) + "px) scale(" + (S / H.s0).toFixed(5) + ")");
+      if (H.fade) {
+        /* The fade stays on the photo's lower edge and thins away as the photo opens */
+        var fb = (H.H - ry - rh).toFixed(1) + "px", fo = (1 - e).toFixed(3);
+        if (fb !== H.fb) { H.fb = fb; heroPhoto.style.setProperty("--fade-b", fb); }
+        if (fo !== H.fo) { H.fo = fo; heroPhoto.style.setProperty("--fade-o", fo); }
+      }
       var part = easeIn(clamp01(p / 0.5)), gone = (1 - clamp01((p - 0.06) / 0.34)).toFixed(3);
       tf(heroBig, -part * 0.6 * H.W, 0); put(heroBig, "opacity", gone);
       tf(heroSub, part * 0.6 * H.W, 0); put(heroSub, "opacity", gone);
@@ -1167,6 +1206,7 @@ html.lenis { scroll-behavior: auto; }
     tones.forEach(function (sec) { sec._blend = false; sec.classList.remove("blend"); });
     cols.forEach(function (col) { col._cy = 0; });
     heroImg.style.width = heroImg.style.height = heroImg.style.left = heroImg.style.top = "";
+    heroPhoto.style.removeProperty("--fade-b"); heroPhoto.style.removeProperty("--fade-o");
   }
 
   /* In-page links glide with the smooth scroll on desktop and still move keyboard focus */
