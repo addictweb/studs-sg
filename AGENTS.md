@@ -126,5 +126,6 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - The browser tab title is "STUDS | Ordinary men, extraordinary challenges" (the About page: "About STUDS | Ordinary men, extraordinary challenges").
 - "Season 2" was taken out of the page title, the hero, the Busselton line, the photo descriptions and the About page. Season numbers now appear only on the totals.
 - Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.
+- The About page says the kit suppliers donate a share of what STUDS spends with them, with no percentages or amounts. The owner found the figures crass, and wrote the wording himself.
 - The race wall leads with two photos the owner chose from Laguna Phuket 2026: the line-up on the beach (`race-lineup`) and the squad wading into the surf (`race-surf`).
 - The child mortality figure is Friends Without A Border's: 1 in 25 children in rural Laos die before turning five. It replaced UNICEF's 1 in 34, so the site agrees with the hospital's own site and the GoFundMe page.
