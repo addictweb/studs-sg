@@ -30,11 +30,13 @@ netlify.toml           Netlify settings: publish the public folder exactly as wr
 tools/update_csp.py    refreshes the script hashes in public/_headers; run it after editing any script
 tools/check_layout.py  loads both pages at phone and desktop sizes and reports layout problems
 tools/photo.py         prepares a new wall photo (all four files) and prints the markup to paste
+tools/share_image.py   makes the link-preview image, the picture apps show when the address is shared
 public/                everything the site serves
   index.html           the fundraising page: HTML, CSS and both scripts inline
   about.html           the About page: HTML and CSS, no JavaScript
+  404.html             the page shown for a wrong address: HTML and CSS only, and every path in it starts with "/"
   _headers             security and caching headers, including the Content Security Policy
-  images/              photos, the STUDS.SG logo files, sponsor logos (images/sponsors/), studs-share.jpg (link preview)
+  images/              photos, the STUDS.SG logo files, sponsor logos (images/sponsors/), hero-phuket-* (the top photo), studs-share-2026.jpg (link preview)
   fonts/               the Archivo variable font (woff2)
   llms.txt             plain facts for AI assistants; keep it in step with the pages
   robots.txt, sitemap.xml, site.webmanifest, favicon.*, icon-*.png, apple-touch-icon.png
@@ -43,7 +45,8 @@ public/                everything the site serves
 ## Facts on the pages (change them everywhere at once)
 
 - Season 1: US$114,454 raised for Caring for Cambodia.
-- Season 2: raising money for Lao Friends Hospital for Children, run by Friends Without A Border. It ends at IRONMAN 70.3 Western Australia in Busselton on 6 December 2026. The total shown is US$126,395, as at 25 November 2026.
+- Season 2: raising money for Lao Friends Hospital for Children, run by Friends Without A Border. It ends at IRONMAN 70.3 Western Australia in Busselton on 6 December 2026. The total shown is US$126,395, as at 25 November 2026. The target is S$200,000 (about US$156,000).
+- The hospital facts follow Friends Without A Border's own site: the only provider of free healthcare for children in northern Laos, more than 52,000 children seen each year, 24 neonatal beds, and US$100 for a CT scan.
 - Facts appear in four places: the visible copy in index.html and about.html, the structured data (JSON-LD) in the head of index.html, llms.txt, and the share text in the `studs-config` block near the bottom of index.html.
 
 ## Common jobs
@@ -55,6 +58,29 @@ public/                everything the site serves
 3. Change the same figure and date in llms.txt.
 
 This touches no script, so no hash refresh is needed.
+
+### After Busselton (6 December 2026)
+
+A scheduled task is set to do this on the evening of 6 December 2026. If it has not run, do it by hand, once the race has taken place. Put the lines that look ahead to the race into the past tense, then update the Season 2 total.
+
+- index.html, under the STUDS acronym: "The finish line is IRONMAN 70.3 Western Australia in Busselton…" becomes "The finish line was IRONMAN 70.3 Western Australia in Busselton…".
+- index.html, the page description, in two places (the `description` meta tag and the structured data): "Singapore men racing IRONMAN 70.3 Western Australia on 6 December 2026 for…" becomes "Singapore men who raced IRONMAN 70.3 Western Australia on 6 December 2026 for…".
+- index.html, the share message in `studs-config`: "is racing IRONMAN 70.3 Western Australia" becomes "raced IRONMAN 70.3 Western Australia".
+- about.html: "Many of us raced the Laguna Phuket Triathlon on 15 November, and IRONMAN 70.3 Western Australia in Busselton follows on 6 December 2026." becomes "Many of us raced the Laguna Phuket Triathlon on 15 November and IRONMAN 70.3 Western Australia in Busselton on 6 December 2026."
+- llms.txt, the Challenges line: "Laguna Phuket Triathlon on 15 November 2026 and IRONMAN 70.3 Western Australia in Busselton, Australia, on 6 December 2026, both raced".
+- Leave "In progress" beside the Season 2 total until the owner says the fundraiser has closed.
+
+None of these is a script, so no hash refresh is needed.
+
+### Change the top photo or the link preview
+
+The top photo is `hero-phuket-800` and `hero-phuket-1400`, each as JPEG and WebP, cut to 16:9. On phones, and when it opens to the full screen, only the middle of the photo shows, so pick one where the people in the middle carry it. The link preview is made from the same photo:
+
+```
+python3 tools/share_image.py hero-phuket-1400.jpg <new-name> "<caption line 1>" "<caption line 2>"
+```
+
+Give it a new file name each time, because apps keep old previews. Then change `og:image` and `twitter:image` in both pages and the two `image` entries in the structured data of index.html, and delete the old file. Keep the caption free of anything that will go out of date.
 
 ### Change some copy
 
@@ -75,7 +101,7 @@ Edit the text inside the right section of index.html or about.html. Keep headlin
 
 ### Change the sponsors
 
-The sponsors are in the footer of both pages (`<ul class="sponsors">`). Logos are white PNGs with a transparent background in public/images/sponsors/. Each has a width class (`.logo-boomarang`, `.logo-cupcke`, `.logo-tsunami`) in the CSS of both pages, set by eye so the logos look the same size. Also update the sponsor list in the JSON-LD of index.html and in llms.txt.
+The sponsors are in the footer of both pages (`<ul class="sponsors">`). Logos are white PNGs with a transparent background in public/images/sponsors/. Each has a width class (`.logo-boomarang`, `.logo-cupcke`, `.logo-tsunami`) in the CSS of both pages, set by eye so the logos look the same size. On phones a media query shrinks the row so that three logos fit on one line: with a fourth sponsor, check the footer at 360px wide. Also update the sponsor list in the JSON-LD of index.html and in llms.txt.
 
 ### Edit a script
 
@@ -127,5 +153,7 @@ Sections in order: the hero ("Ordinary men."), the challenge (the STUDS acronym,
 - "Season 2" was taken out of the page title, the hero, the Busselton line, the photo descriptions and the About page. Season numbers now appear only on the totals.
 - Photos are WebP with JPEG fallbacks, with 600px copies of the wall photos, and the rest are fetched in the background after the page loads. This cut a phone visit from about 4.2 MB of photos to under 2 MB.
 - The About page says the kit suppliers donate a share of what STUDS spends with them, with no percentages or amounts. The owner found the figures crass, and wrote the wording himself.
-- The race wall leads with two photos the owner chose from Laguna Phuket 2026: the line-up on the beach (`race-lineup`) and the squad wading into the surf (`race-surf`).
+- The owner chose two photos from Laguna Phuket 2026: the line-up on the beach, now the top photo and the link preview, and the squad wading into the surf (`race-surf`), which stays on the race wall.
+- The About page says "not all of us are men": a woman raced in STUDS kit at Phuket in 2026. Everywhere else the group is still described as men.
+- The link preview's caption names no upcoming race, so it does not go out of date.
 - The child mortality figure is Friends Without A Border's: 1 in 25 children in rural Laos die before turning five. It replaced UNICEF's 1 in 34, so the site agrees with the hospital's own site and the GoFundMe page.

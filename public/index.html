@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="STUDS.SG">
 <meta property="og:title" content="Ordinary men. Extraordinary challenges.">
 <meta property="og:description" content="A group of Singapore men racing to raise money for free children’s healthcare in Laos. Every penny helps.">
-<meta property="og:image" content="https://studs.sg/images/studs-share.jpg">
+<meta property="og:image" content="https://studs.sg/images/studs-share-2026.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ordinary men. Extraordinary challenges.">
 <meta name="twitter:description" content="A group of Singapore men racing to raise money for free children’s healthcare in Laos. Every penny helps.">
-<meta name="twitter:image" content="https://studs.sg/images/studs-share.jpg">
+<meta name="twitter:image" content="https://studs.sg/images/studs-share-2026.jpg">
 <meta name="twitter:image:alt" content="STUDS.SG: Ordinary men. Extraordinary challenges.">
 <meta name="apple-mobile-web-app-title" content="STUDS.SG">
 <meta name="application-name" content="STUDS.SG">
@@ -84,7 +84,7 @@
      "url": "https://www.tsunami-sport.com/"
     }
    ],
-   "image": "https://studs.sg/images/studs-share.jpg"
+   "image": "https://studs.sg/images/studs-share-2026.jpg"
   },
   {
    "@type": "WebSite",
@@ -111,7 +111,7 @@
    },
    "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://studs.sg/images/studs-share.jpg",
+    "url": "https://studs.sg/images/studs-share-2026.jpg",
     "width": 1200,
     "height": 630
    },
@@ -299,6 +299,7 @@ p { text-wrap: pretty; }
 .fact:last-child { border-bottom: 1px solid rgba(12, 26, 51, .16); }
 .fact dt { font-weight: 800; font-size: 1.75rem; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .fact dd { color: var(--slate); }
+.fact .src { display: block; margin-top: 3px; font-size: .8125rem; }
 .more { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 20px; }
 .cause-photo { aspect-ratio: 4 / 3; }
 .partner-logo { width: 96px; }
@@ -414,7 +415,8 @@ p { text-wrap: pretty; }
 .donate-grid { display: grid; }
 .donate-title { font-weight: 900; text-transform: uppercase; font-size: clamp(3rem, .6rem + 11.4vw, 9.4rem); line-height: .86; letter-spacing: -.01em; }
 .donate-title .w { display: inline-block; }
-.donate-actions { margin-top: 24px; display: grid; }
+.donate-fact { margin-top: 24px; font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); font-weight: 700; line-height: 1.3; max-width: 22em; }
+.donate-actions { margin-top: 18px; display: grid; }
 .donate-note { margin-top: 12px; font-size: 1rem; }
 .share { margin-top: 48px; padding-top: 24px; border-top: 2px solid rgba(12, 26, 51, .25); }
 .share-ask { font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); font-weight: 700; line-height: 1.3; max-width: 22em; }
@@ -450,6 +452,8 @@ p { text-wrap: pretty; }
 .logo-boomarang { width: 8.5em; }
 .logo-cupcke { width: 7em; }
 .logo-tsunami { width: 8.6em; }
+/* Phones: slightly smaller logos and a tighter gap, so all three sit on one row */
+@media (max-width: 539px) { .sponsors { column-gap: 18px; font-size: clamp(.625rem, 2.85vw, .875rem); } }
 .footer-meta .credit { margin-top: 28px; }
 .site-footer a { color: var(--paper); text-underline-offset: 3px; }
 @media (min-width: 960px) {
@@ -527,11 +531,11 @@ html.lenis { scroll-behavior: auto; }
         <div class="hero-slot">
           <figure class="hero-photo">
             <picture>
-              <source type="image/webp" srcset="images/squad-800.webp 800w, images/squad-1400.webp 1400w" sizes="100vw">
-              <img src="images/squad-1400.jpg"
-                 srcset="images/squad-800.jpg 800w, images/squad-1400.jpg 1400w"
+              <source type="image/webp" srcset="images/hero-phuket-800.webp 800w, images/hero-phuket-1400.webp 1400w" sizes="100vw">
+              <img src="images/hero-phuket-1400.jpg"
+                 srcset="images/hero-phuket-800.jpg 800w, images/hero-phuket-1400.jpg 1400w"
                  sizes="100vw" width="1400" height="788" fetchpriority="high"
-                 alt="The STUDS squad, more than 20 men in matching kit, lined up outside a temple in Thailand">
+                 alt="Fifteen STUDS members in matching race suits, arm in arm on the beach before the swim at Laguna Phuket Triathlon">
             </picture>
           </figure>
         </div>
@@ -591,7 +595,7 @@ html.lenis { scroll-behavior: auto; }
       <figure class="race-feature plx"><picture><source type="image/webp" srcset="images/race-family-800.webp 800w, images/race-family-1400.webp 1400w" sizes="(min-width: 1440px) 1216px, 92vw"><img src="images/race-family-1400.jpg" srcset="images/race-family-800.jpg 800w, images/race-family-1400.jpg 1400w" sizes="(min-width: 1440px) 1216px, 92vw" width="1400" height="788" loading="lazy" decoding="async" alt="The STUDS squad with their families at the Laguna Phuket Triathlon finish line"></picture></figure>
       <div class="wall">
         <div class="wall-col">
-          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-lineup-600.webp 600w, images/race-lineup.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-lineup.jpg" srcset="images/race-lineup-600.jpg 600w, images/race-lineup.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Fifteen STUDS members in matching race suits, arm in arm on the beach before the swim at Laguna Phuket Triathlon"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-arms-600.webp 600w, images/race-arms.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-arms.jpg" srcset="images/race-arms-600.jpg 600w, images/race-arms.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member raising both arms on the beach under the Laguna Phuket Triathlon arch, swim cap in hand"></picture></figure>
           <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-together-600.webp 600w, images/race-together.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 50%" src="images/race-together.jpg" srcset="images/race-together-600.jpg 600w, images/race-together.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="Two STUDS members raising their arms as they cross the finish line together"></picture></figure>
           <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-climb-600.webp 600w, images/race-climb.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-climb.jpg" srcset="images/race-climb-600.jpg 600w, images/race-climb.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member riding up a steep hill on the bike leg, ahead of other racers"></picture></figure>
           <figure class="wall-item plx upright"><picture><source type="image/webp" srcset="images/race-arch-600.webp 600w, images/race-arch.webp 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 40%" src="images/race-arch.jpg" srcset="images/race-arch-600.jpg 600w, images/race-arch.jpg 667w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="667" height="1000" loading="lazy" decoding="async" alt="A STUDS member running towards the Laguna Phuket Triathlon finish arch"></picture></figure>
@@ -602,9 +606,9 @@ html.lenis { scroll-behavior: auto; }
           <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-bump-600.webp 600w, images/race-bump.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-bump.jpg" srcset="images/race-bump-600.jpg 600w, images/race-bump.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member in a swim cap and goggles reaching out for a fist bump on the beach"></picture></figure>
         </div>
         <div class="wall-col">
-          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-arms-600.webp 600w, images/race-arms.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-arms.jpg" srcset="images/race-arms-600.jpg 600w, images/race-arms.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member raising both arms on the beach under the Laguna Phuket Triathlon arch, swim cap in hand"></picture></figure>
-          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/training-flyer-600.webp 600w, images/training-flyer.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 55% 50%" src="images/training-flyer.jpg" srcset="images/training-flyer-600.jpg 600w, images/training-flyer.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member cycling past the Singapore Flyer"></picture></figure>
           <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-highfive-600.webp 600w, images/race-highfive.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-highfive.jpg" srcset="images/race-highfive-600.jpg 600w, images/race-highfive.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member high-fiving a row of outstretched hands on his way to the finish"></picture></figure>
+          <figure class="wall-item plx portrait"><picture><source type="image/webp" srcset="images/training-flyer-600.webp 600w, images/training-flyer.webp 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 55% 50%" src="images/training-flyer.jpg" srcset="images/training-flyer-600.jpg 600w, images/training-flyer.jpg 750w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="750" height="1000" loading="lazy" decoding="async" alt="A STUDS member cycling past the Singapore Flyer"></picture></figure>
+          <figure class="wall-item plx wide"><picture><source type="image/webp" srcset="images/race-shore-600.webp 600w, images/race-shore.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img src="images/race-shore.jpg" srcset="images/race-shore-600.jpg 600w, images/race-shore.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="667" loading="lazy" decoding="async" alt="A STUDS member in team kit looking out at the surf before the swim"></picture></figure>
           <figure class="wall-item plx landscape"><picture><source type="image/webp" srcset="images/training-banner-600.webp 600w, images/training-banner.webp 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)"><img style="object-position: 50% 55%" src="images/training-banner.jpg" srcset="images/training-banner-600.jpg 600w, images/training-banner.jpg 1000w" sizes="(min-width: 1440px) 384px, (min-width: 960px) 27vw, calc(50vw - 25px)" width="1000" height="750" loading="lazy" decoding="async" alt="The STUDS squad on a beach with their cartoon team banner"></picture></figure>
         </div>
       </div>
@@ -619,7 +623,7 @@ html.lenis { scroll-behavior: auto; }
         <dl class="facts">
           <div class="fact"><dt>52,000</dt><dd>children seen each year</dd></div>
           <div class="fact"><dt>24</dt><dd>neonatal beds, the only unit of its kind in the region</dd></div>
-          <div class="fact"><dt>1 in 25</dt><dd>children in rural Laos die before turning five (Friends Without A Border)</dd></div>
+          <div class="fact"><dt>1 in 25</dt><dd>children in rural Laos die before turning five <span class="src">Source: Friends Without A Border</span></dd></div>
         </dl>
         <div class="more">
           <a class="btn btn-ghost" href="https://fwab.org/about-the-hospital">Find out more<span class="sr-only"> about Lao Friends Hospital for Children</span></a>
@@ -674,10 +678,11 @@ html.lenis { scroll-behavior: auto; }
     <div class="wrap donate-grid">
       <h2 class="donate-title" id="donate-title"><span class="w">Every</span> <span class="w">penny</span> <span class="w">helps.</span></h2>
       <div class="donate-main">
+        <p class="donate-fact">US$100 pays for a CT scan for an injured child.</p>
         <div class="donate-actions">
           <a class="btn btn-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more" data-donate>Donate on GoFundMe</a>
         </div>
-        <p class="donate-note">Donations go to Friends Without A Border. GoFundMe shows the latest total.</p>
+        <p class="donate-note">Donations go to Friends Without A Border, which supplied the scan cost. GoFundMe shows the latest total.</p>
       </div>
       <div class="share" id="share" tabindex="-1">
         <p class="share-ask">Please share this fundraiser with your friends, family and colleagues.</p>

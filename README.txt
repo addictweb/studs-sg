@@ -7,7 +7,8 @@ WHAT'S HERE
   public/               Everything the site serves. Publish this folder.
     index.html          The fundraising page: HTML, CSS and JavaScript in one file.
     about.html          The About page.
-    images/             Photos, logos (sponsor logos in images/sponsors/) and studs-share.jpg,
+    404.html            The page shown for a wrong address.
+    images/             Photos, logos (sponsor logos in images/sponsors/) and studs-share-2026.jpg,
                         the preview WhatsApp and social apps show when the link is shared.
     _headers            Security and caching headers, read by Netlify.
     llms.txt            Plain facts about STUDS for AI assistants.
@@ -15,6 +16,7 @@ WHAT'S HERE
   tools/update_csp.py   Run after editing either script in index.html (see SECURITY).
   tools/check_layout.py Loads both pages at phone and desktop sizes and reports anything broken.
   tools/photo.py        Prepares a new photo for the photo walls.
+  tools/share_image.py  Makes the link-preview image.
   AGENTS.md, CLAUDE.md  The guide for AI assistants (and anyone editing in depth).
 
 PUBLISH

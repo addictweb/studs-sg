@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<!--
+STUDS.SG: the page visitors see when an address is wrong.
+Netlify serves this file for any address that does not exist, so every link and file path here starts with "/".
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found | STUDS</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0C1A33">
+<link rel="icon" href="/favicon.ico?v=2" sizes="32x32">
+<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="preload" href="/fonts/archivo-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+:root {
+  --navy: #0C1A33; --paper: #F3F5F6; --green: #7DC242; --mist: #A9B4C6;
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --edge-l: max(20px, env(safe-area-inset-left)); --edge-r: max(20px, env(safe-area-inset-right));
+  --max: 1360px; --header-h: 54px;
+  color-scheme: dark;
+}
+@media (min-width: 960px) {
+  :root { --edge-l: clamp(32px, 5vw, 72px); --edge-r: clamp(32px, 5vw, 72px); --header-h: 88px; }
+}
+@font-face {
+  font-family: "Archivo"; src: url("/fonts/archivo-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; min-height: 100vh; min-height: 100svh; background: var(--navy); color: var(--paper); font: 400 1.0625rem/1.6 var(--font); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+h1, p { margin: 0; }
+a { color: inherit; text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--paper); outline-offset: 3px; }
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-left: var(--edge-l); padding-right: var(--edge-r); }
+.site-header { padding-top: env(safe-area-inset-top); }
+.site-header .wrap { display: flex; align-items: center; min-height: var(--header-h); }
+.wordmark { display: inline-block; padding-block: 12px; font-weight: 900; font-size: 1.25rem; letter-spacing: -.01em; line-height: 1; text-decoration: none; }
+.wordmark .dot { color: var(--green); }
+.lost { padding-block: 40px 72px; }
+.lost h1 { display: flex; flex-direction: column; gap: 10px; }
+.big { display: block; font-weight: 900; text-transform: uppercase; line-height: .9; letter-spacing: -.01em; font-size: clamp(3rem, 16vw, 9rem); }
+.sub { display: block; font-weight: 700; font-size: clamp(1.375rem, 1rem + 1.6vw, 2.25rem); line-height: 1.15; }
+.actions { display: grid; gap: 10px; margin-top: 28px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 22px;
+  border: 2px solid transparent; border-radius: 4px; font: 700 1.0625rem/1.1 var(--font);
+  text-decoration: none; text-align: center; -webkit-tap-highlight-color: transparent;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.btn-donate { background: var(--green); color: var(--navy); }
+.btn-donate:hover { background: #93D25E; }
+.btn-ghost { color: var(--paper); border-color: rgba(243, 245, 246, .6); }
+.btn-ghost:hover { border-color: var(--paper); }
+@media (min-width: 960px) {
+  .wordmark { font-size: 1.5rem; }
+  .lost { padding-block: 72px 112px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="STUDS.SG home">STUDS<span class="dot">.</span>SG</a>
+  </div>
+</header>
+
+<main>
+  <section class="lost" aria-labelledby="lost-title">
+    <div class="wrap">
+      <h1 id="lost-title"><span class="big">Wrong turn.</span><span class="sub">There’s no page at this address.</span></h1>
+      <div class="actions">
+        <a class="btn btn-donate" href="https://www.gofundme.com/f/studs-season-2-bigger-bolder-and-back-for-more">Donate on GoFundMe</a>
+        <a class="btn btn-ghost" href="/">Back to the fundraiser</a>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
